@@ -1,0 +1,101 @@
+@media(max-width: 991px) {
+    .portfolio-section .portfolio-item,
+    .service-section .service-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media(max-width: 767px) {
+    .contact-section .w-50,
+    .contact-section .contact-item,
+    .portfolio-popup .info,
+    .portfolio-popup .description,
+    .portfolio-section .portfolio-item,
+    .service-section .service-item,
+    .about-section .skills .skill-item,
+    .about-section .about-info,
+    .about-section .about-img,
+    .home-section .home-text,
+    .home-section .home-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .home-section .home-img .img-box {
+        margin: auto !important;
+        margin-bottom: 40px;
+        max-width: 350px;
+    }
+
+    .home-section .home-text {
+        order: 2;
+        text-align: center;
+    }
+
+    .home-section .full-screen {
+        padding: 100px 0;
+    }
+
+    .effect-3 {
+        margin-left: -60px;
+    }
+    .effect-4 {
+        left: 15%;
+    }
+    .effect-5 {
+        right: 4%;
+    }
+
+    .about-section .about-img {
+        /* padding-bottom: 30px; */
+        padding: 0 40px 30px 40px;
+    }
+
+    .about-section .timeline .timeline-item:nth-child(even) {
+        padding-right: 15px;
+        text-align: left;
+        padding-left: 75px;
+    }
+
+    .about-section .timeline .timeline-item:nth-child(odd) {
+        padding-left: 75px;
+    }
+    
+    .about-section .timeline::before {
+        left: 35px;
+    }
+
+    .about-section .timeline .timeline-item:nth-child(even) .icon {
+        right: auto;
+        left: -60px;
+    }
+    .about-section .timeline .timeline-item:nth-child(odd) .icon {
+        right: auto;
+        left: -60px;
+    }
+    
+    .about-section .timeline .timeline-item {
+        margin-bottom: 40px;
+    }
+    
+    .about-section .timeline .timeline-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .about-section .timeline .timeline-item:nth-child(even) .timeline-item-inner::before {
+        left: -30px;
+        right: auto;
+    }
+
+}
+
+@media(max-width: 574px) {
+    .home-section .home-img .img-box {
+        max-width: 260px;
+    }
+
+    .home-section .home-text h2 {
+        font-size: 40px;
+    }
+}

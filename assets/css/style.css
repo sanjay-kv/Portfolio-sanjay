@@ -94,7 +94,7 @@ img {
 }
 
 .justify-content-between {
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .outer-shadow {

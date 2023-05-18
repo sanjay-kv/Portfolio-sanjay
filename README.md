@@ -1,10 +1,7 @@
 # Portfolio Sanjay K V
  ## Fully Responsive Layout Neomorphism Designed Portfolio Page 
 
-<img src="https://img.shields.io/github/issues/sanjay-kv/Portfolio-sanjay"> 
-<img src="https://img.shields.io/github/languages/top/sanjay-kv/Portfolio-sanjay">
-<img src ="https://img.shields.io/github/languages/code-size/sanjay-kv/Portfolio-sanjay">
-<img src ="https://img.shields.io/bitbucket/issues/sanjay-kv/Portfolio-sanjay">
+<img src="https://img.shields.io/github/issues/sanjay-kv/Portfolio-sanjay"> <img src="https://img.shields.io/github/languages/top/sanjay-kv/Portfolio-sanjay"> <img src ="https://img.shields.io/github/languages/code-size/sanjay-kv/Portfolio-sanjay"> <img src ="https://img.shields.io/bitbucket/issues/sanjay-kv/Portfolio-sanjay">
 
 it is a fully responsive Personal Portfolio Website Template which features Neomorphism Design.<br>
 It will help you to presents yourself or your business resume more smartly and easily.<br>

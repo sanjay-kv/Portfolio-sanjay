@@ -292,8 +292,7 @@ function bodyScrollingToggle() {
 
 //  ====================  TESTIMONIAL SLIDER =================
 
-(() => {
-
+window.addEventListener('load', () => {
     const sliderContainer = document.querySelector('.testi-slider-container');
     const slides = sliderContainer.querySelectorAll('.testi-item');
     const slideWidth = sliderContainer.offsetWidth;
@@ -301,7 +300,6 @@ function bodyScrollingToggle() {
     const nextBtn = document.querySelector('.testi-slider-nav .next');
     const activeSlide = sliderContainer.querySelector('.testi-item.active');
     let slideIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
-    console.log(slideIndex);
 
     // set width dari semua slide
     slides.forEach((slide) => {
@@ -339,9 +337,7 @@ function bodyScrollingToggle() {
     });
 
     slider();
-
-
-})();
+});
 
 
 // =============== MENYEMBUNYIKAN SEMUA SECTION KECUALI ACTIVE ==========
@@ -361,5 +357,13 @@ window.addEventListener('load', () => {
     document.querySelector('.preloader').classList.add('fade-out');
     setTimeout(() => {
         document.querySelector('.preloader').style.display = 'none';
-    }, 600);
+    }, 100);
 })
+
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll('img.lazy');
+    lazyImages.forEach(img => {
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+    });
+});

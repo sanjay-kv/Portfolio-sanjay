@@ -1,63 +1,56 @@
 // ================ NAVIGATION MENU ==============
 (() => {
-
     const hamburgerBtn = document.querySelector('.hamburger-btn');
     const navMenu = document.querySelector('.nav-menu');
     const closeNavBtn = navMenu.querySelector('.close-nav-menu');
 
-    hamburgerBtn.addEventListener('click', showNavMenu);
-    closeNavBtn.addEventListener('click', hideNavMenu);
-
-    function showNavMenu() {
+    hamburgerBtn.addEventListener('click', () => {
         navMenu.classList.add('open');
         bodyScrollingToggle();
-
         document.onkeydown = (e) => {
-            if (e.keyCode == 27) {
-                hideNavMenu();
-            }
-        }
-    }
+            if (e.keyCode == 27) hideNavMenu();
+        };
+    });
+
+    closeNavBtn.addEventListener('click', hideNavMenu);
+
     function hideNavMenu() {
         navMenu.classList.remove('open');
         fadeOutEffect();
         bodyScrollingToggle();
-
-        document.onkeydown = (e) => {
-            if (e.keyCode == 27) {
-                null;
-            }
-        }
+        document.onkeydown = null;
     }
+
     function fadeOutEffect() {
-        document.querySelector('.fade-out-effect').classList.add('active');
-        setTimeout(() => {
-            document.querySelector('.fade-out-effect').classList.remove('active');
-        }, 300)
+        const fadeOutElement = document.querySelector('.fade-out-effect');
+        fadeOutElement.classList.add('active');
+        setTimeout(() => fadeOutElement.classList.remove('active'), 300);
     }
 
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('link-item')) {
-            if (e.target.hash !== '') {
+            const hash = e.target.hash;
+            if (hash !== '') {
                 e.preventDefault();
-                const hash = e.target.hash;
+                const activeSection = document.querySelector('section.active');
+                const targetSection = document.querySelector(hash);
 
-                document.querySelector('section.active').classList.add('hide');
-                document.querySelector('section.active').classList.remove('active');
+                activeSection.classList.add('hide');
+                activeSection.classList.remove('active');
 
-                document.querySelector(hash).classList.add('active');
-                document.querySelector(hash).classList.remove('hide');
+                targetSection.classList.add('active');
+                targetSection.classList.remove('hide');
 
-                navMenu.querySelector('.active').classList.add('outer-shadow', 'hover-in-shadow');
-                navMenu.querySelector('.active').classList.remove('active', 'inner-shadow');
+                const activeNavItem = navMenu.querySelector('.active');
+                activeNavItem.classList.add('outer-shadow', 'hover-in-shadow');
+                activeNavItem.classList.remove('active', 'inner-shadow');
 
                 if (navMenu.classList.contains('open')) {
                     e.target.classList.add('active', 'inner-shadow');
                     e.target.classList.remove('outer-shadow', 'hover-in-shadow');
-
                     hideNavMenu();
                 } else {
-                    let navItems = navMenu.querySelectorAll('.link-item');
+                    const navItems = navMenu.querySelectorAll('.link-item');
                     navItems.forEach((item) => {
                         if (hash === item.hash) {
                             item.classList.add('active', 'inner-shadow');
@@ -70,7 +63,6 @@
             }
         }
     });
-
 })();
 
 //  ============= ABOUT SECTION TABS =============
@@ -361,5 +353,5 @@ window.addEventListener('load', () => {
     document.querySelector('.preloader').classList.add('fade-out');
     setTimeout(() => {
         document.querySelector('.preloader').style.display = 'none';
-    }, 600);
+    }, 400);
 })

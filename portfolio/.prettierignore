@@ -1,0 +1,44 @@
+# Node.js dependencies
+node_modules/
+.next/
+.vscode
+.wrangler
+
+# Github files
+.github
+.gitignore
+
+# Build artifacts
+dist/
+build/
+
+# Environment files
+.env
+.env.*
+env.d.ts
+
+# Static files and assets
+public/
+*.ico
+*.png
+*.jpg
+*.svg
+
+# Minified files
+*.min.js
+*.min.css
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# packages
+package.json
+package-lock.json
+postcss.config.mjs
+tsconfig.json
+wrangler.jsonc
+eslint.config.mjs

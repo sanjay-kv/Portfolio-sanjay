@@ -2,100 +2,94 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]'>
-      <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start'>
-        <Image
-          className='dark:invert'
-          src='https://nextjs.org/icons/next.svg'
-          alt='Next.js logo'
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className='list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]'>
-          <li className='mb-2'>
-            Get started by editing{' '}
-            <code className='bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold'>
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className='min-h-screen w-full'>
+      {/* Top blue line */}
+      <div className='bg-[#A4D2FB] h-2'></div>
 
-        <div className='flex gap-4 items-center flex-col sm:flex-row'>
-          <a
-            className='rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
-            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
+      {/* Header section */}
+      <div className='flex items-center justify-between px-4 sm:px-8 md:px-16 py-5 flex-wrap gap-4'>
+        <div className='font-Inter text-xl sm:text-2xl font-extrabold'>Sanjay Viswanathan</div>
+        <button className='rounded-xl px-3 py-1.5 sm:px-5 sm:py-2 bg-[#2878F2] text-white text-sm sm:text-base whitespace-nowrap'>
+          YOUR OPEN-SOURCE GUIDE
+        </button>
+      </div>
+
+      {/* Main content */}
+      <div className='w-full flex bg-black flex-col items-center justify-center text-white'>
+        {/* Hero headline */}
+        <div className='flex items-center justify-center flex-col text-2xl sm:text-3xl md:text-4xl font-black tracking-widest pt-10 px-4 text-center'>
+          <div>GET YOUR NEXT OPEN-SOURCE CONTRIBUTION FASTER.</div>
+
+          <svg
+            className='w-full max-w-[712px] h-auto my-2'
+            viewBox='0 0 712 24'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+            preserveAspectRatio='xMidYMid meet'
           >
-            <Image
-              className='dark:invert'
-              src='https://nextjs.org/icons/vercel.svg'
-              alt='Vercel logomark'
-              width={20}
-              height={20}
+            <path
+              d='M1 6.54095C73.6203 4.29653 222.985 0.855092 295.164 1.00472C474.726 1.30398 574.892 1.30397 711 6.39132C547.199 8.26166 254.214 9.0098 90.4129 15.2942C212.085 13.1246 464.857 14.546 585.203 16.2668C502.714 17.3141 383.104 16.0423 294.869 23'
+              fill='black'
             />
-            Deploy now
-          </a>
-          <a
-            className='rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
-            href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Read our docs
-          </a>
+            <path
+              d='M1 6.54095C73.6203 4.29653 222.985 0.855092 295.164 1.00472C474.726 1.30398 574.892 1.30397 711 6.39132C547.199 8.26166 254.214 9.0098 90.4129 15.2942C212.085 13.1246 464.857 14.546 585.203 16.2668C502.714 17.3141 383.104 16.0423 294.869 23'
+              stroke='#243CE6'
+            />
+          </svg>
+
+          <div>MUCH FASTER.</div>
         </div>
-      </main>
-      <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/file.svg'
-            alt='File icon'
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/window.svg'
-            alt='Window icon'
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/globe.svg'
-            alt='Globe icon'
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Features list */}
+        <div className='mt-10 px-4 text-center text-sm sm:text-base'>
+          <p className='max-w-4xl mx-auto'>
+            1-1 MENTORSHIP, ULTIMATE DATA PORTFOLIO, ULTIMATE DATA ROADMAP, ULTIMATE PROJECT
+            BUILDER, DATA STORYTELLING GUIDE, JOB SEEKER ACADEMY, MOST POPULAR EXCEL FUNCTIONS &
+            FORMULAS, ULTIMATE RESUME TEMPLATE, AI JOB QUEST...
+          </p>
+        </div>
+
+        {/* CTA section with gradient background */}
+        <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 w-full max-w-[1223px] py-24 my-6 px-4 bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(40,120,242,0.6)_0%,_rgba(50,15,133,0)_100%)]'>
+          <button className='rounded-xl px-5 py-2 bg-[#2878F2] text-white w-full sm:w-auto'>
+            Kick start your open-source
+          </button>
+          <button className='rounded-xl px-5 py-2 bg-[#2878F2] text-white w-full sm:w-auto'>
+            1:1 MENTORSHIP
+          </button>
+        </div>
+
+        {/* Image grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 w-full px-4 md:px-8 lg:px-16 max-w-7xl'>
+          <div className='w-full pt-4 md:pt-10'>
+            <Image
+              className='w-full h-auto'
+              src='/sanjay-viswanathan-hero.png'
+              width={500}
+              height={500}
+              alt='Sanjay Viswanathan hero image'
+              priority
+            />
+          </div>
+          <div className='w-full pt-4 md:pt-10'>
+            <Image
+              className='w-full h-auto'
+              src='/sanjay-viswanathan-skills.png'
+              width={500}
+              height={500}
+              alt='Sanjay Viswanathan skills showcase'
+            />
+          </div>
+        </div>
+
+        {/* Testimonial heading */}
+        <div className='flex text-3xl sm:text-4xl md:text-5xl mt-10 mb-6 font-black items-center justify-center w-full px-4 py-16 bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(40,120,242,0.6)_0%,_rgba(50,15,133,0)_100%)] text-center'>
+          WHAT OTHERS HAVE SAID
+        </div>
+
+        {/* Testimonial component placeholder */}
+        {/* <Testimonial/> */}
+      </div>
     </div>
   )
 }

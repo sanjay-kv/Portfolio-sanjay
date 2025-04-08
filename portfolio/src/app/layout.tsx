@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import Navbar from '@/components/Navbar'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -40,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@sanjaykv',
-    creator: '@sanjaykv',
+    site: '@sanjay_k_v',
+    creator: '@sanjay_k_v',
     title: 'Sanjay Viswanathan',
     description:
       'I am Sanjay K V, Data Driven Problem solver and Head of Content at recodehive.com, currently pushing limits to make Data Science Tutorials accessible to everyone.',
@@ -90,7 +91,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }

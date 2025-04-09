@@ -9,9 +9,7 @@ export default function Home() {
       {/* Header section */}
       <div className='bg-header flex items-center justify-between px-4 sm:px-8 md:px-16 py-5 flex-wrap gap-4'>
         <div className='text-xl sm:text-2xl font-extrabold'>Sanjay Viswanathan</div>
-        <button className='btn'>
-          YOUR OPEN-SOURCE GUIDE
-        </button>
+        <button className='btn'>YOUR OPEN-SOURCE GUIDE</button>
       </div>
 
       {/* Main content */}
@@ -51,12 +49,8 @@ export default function Home() {
 
         {/* CTA section with gradient background */}
         <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 w-full max-w-[1223px] py-24 my-6 px-4 bg-radial'>
-          <button className='btn'>
-            Kick start your open-source
-          </button>
-          <button className='btn'>
-            1:1 MENTORSHIP
-          </button>
+          <button className='btn'>Kick start your open-source</button>
+          <button className='btn'>1:1 MENTORSHIP</button>
         </div>
 
         {/* Image grid */}

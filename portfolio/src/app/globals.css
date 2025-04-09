@@ -19,7 +19,8 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Roboto', 'Inter', serif;
+  font-family: 'Roboto Mono';
+  /* font-family: 'Roboto Mono', 'Inter', serif; */
 }
 
 @layer utilities {
@@ -28,41 +29,24 @@ body {
   }
 }
 
-@layer base {
-  :root {
-    --color-primary: 40 120 242;
-    /* #2878F2 */
-    --color-accent: 164 210 251;
-    /* #A4D2FB */
-    --color-foreground: 254 254 254;
-    /* #FEFEFE */
-    --color-background: 0 0 0;
-    /* #000000 */
-    --color-blue-accent: 36 60 230;
-    /* #243CE6 */
-  }
+@theme {
+  --color-primary: #2878F2;
+  --color-active: #66ABFC;
+  --color-header: #191919;
+  --color-accent: #A4D2FB;
+  --color-foreground: #FEFEFE;
+  --color-background: #000000;
+  --color-blue-accent: #243CE6;
+  --color-gradient: radial-gradient(50% 50% at 50% 50%, rgba(40, 120, 242, 0.6) 0%, rgba(50, 15, 133, 0) 100%);
+  /* --font-Inter: 'Inter', serif; */
 }
 
-/*
-@layer components {
+@layer utilities {
+  .bg-radial {
+    background-image: radial-gradient(50% 50% at 50% 50%, rgba(40, 120, 242, 0.6) 0%, rgba(50, 15, 133, 0) 100%);
+  }
 
   .btn {
-    @apply rounded-xl px-3 py-1.5 sm:px-5 sm:py-2 text-sm sm:text-base font-medium transition-all duration-200;
+    @apply rounded-xl px-3 py-1.5 sm:px-5 sm:py-2 bg-primary text-foreground text-sm sm:text-base whitespace-nowrap
   }
-
-  .btn-primary {
-    @apply btn bg-primary text-white hover:bg-primary/90;
-  }
-
-  .gradient-bg {
-    @apply bg-[radial-gradient(50%_50%_at_50%_50%,_rgb(var(--color-primary)/0.6)_0%,_rgba(50,15,133,0)_100%)];
-  }
-
-  .heading-large {
-    @apply text-2xl sm:text-3xl md:text-4xl font-black tracking-widest;
-  }
-
-  .heading-xl {
-    @apply text-3xl sm:text-4xl md:text-5xl font-black;
-  }
-} */
+}

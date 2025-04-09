@@ -7,15 +7,15 @@ export default function Home() {
       <div className='bg-[#A4D2FB] h-2'></div>
 
       {/* Header section */}
-      <div className='flex items-center justify-between px-4 sm:px-8 md:px-16 py-5 flex-wrap gap-4'>
-        <div className='font-Inter text-xl sm:text-2xl font-extrabold'>Sanjay Viswanathan</div>
-        <button className='rounded-xl px-3 py-1.5 sm:px-5 sm:py-2 bg-[#2878F2] text-white text-sm sm:text-base whitespace-nowrap'>
+      <div className='bg-header flex items-center justify-between px-4 sm:px-8 md:px-16 py-5 flex-wrap gap-4'>
+        <div className='text-xl sm:text-2xl font-extrabold'>Sanjay Viswanathan</div>
+        <button className='btn'>
           YOUR OPEN-SOURCE GUIDE
         </button>
       </div>
 
       {/* Main content */}
-      <div className='w-full flex bg-black flex-col items-center justify-center text-white'>
+      <div className='w-full flex bg-background flex-col items-center justify-center text-foreground'>
         {/* Hero headline */}
         <div className='flex items-center justify-center flex-col text-2xl sm:text-3xl md:text-4xl font-black tracking-widest pt-10 px-4 text-center'>
           <div>GET YOUR NEXT OPEN-SOURCE CONTRIBUTION FASTER.</div>
@@ -50,11 +50,11 @@ export default function Home() {
         </div>
 
         {/* CTA section with gradient background */}
-        <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 w-full max-w-[1223px] py-24 my-6 px-4 bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(40,120,242,0.6)_0%,_rgba(50,15,133,0)_100%)]'>
-          <button className='rounded-xl px-5 py-2 bg-[#2878F2] text-white w-full sm:w-auto'>
+        <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 w-full max-w-[1223px] py-24 my-6 px-4 bg-radial'>
+          <button className='btn'>
             Kick start your open-source
           </button>
-          <button className='rounded-xl px-5 py-2 bg-[#2878F2] text-white w-full sm:w-auto'>
+          <button className='btn'>
             1:1 MENTORSHIP
           </button>
         </div>
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
 
         {/* Testimonial heading */}
-        <div className='flex text-3xl sm:text-4xl md:text-5xl mt-10 mb-6 font-black items-center justify-center w-full px-4 py-16 bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(40,120,242,0.6)_0%,_rgba(50,15,133,0)_100%)] text-center'>
+        <div className='flex text-3xl sm:text-4xl md:text-5xl mt-10 mb-6 font-black items-center justify-center w-full px-4 py-16 bg-radial text-center'>
           WHAT OTHERS HAVE SAID
         </div>
 

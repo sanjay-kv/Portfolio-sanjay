@@ -1,28 +1,29 @@
 import Link from 'next/link'
-import SocialIcon from './Icons'
+import SocialIcon from '@/components/commmon/Icons'
+import { GITHUB, INSTAGRAM, LINKEDIN, MAIL, PINTEREST, TWITTER, WORDPRESS, YOUTUBE } from '@/constants/links'
 
 const socialLinks = [
-  { name: 'YouTube', icon: 'youtube', url: 'https://youtube.com/', color: 'bg-red-600' },
-  { name: 'LinkedIn', icon: 'linkedin', url: 'https://linkedin.com/', color: 'bg-blue-700' },
-  { name: 'GitHub', icon: 'github', url: 'https://github.com/', color: 'bg-gray-800' },
-  { name: 'Mail', icon: 'mail', url: 'mailto:contact@example.com', color: 'bg-blue-500' },
+  { name: 'YouTube', icon: 'youtube', url: YOUTUBE, color: 'bg-red-600' },
+  { name: 'LinkedIn', icon: 'linkedin', url: LINKEDIN, color: 'bg-blue-700' },
+  { name: 'GitHub', icon: 'github', url: GITHUB, color: 'bg-gray-800' },
+  { name: 'Mail', icon: 'mail', url: MAIL, color: 'bg-blue-500' },
   {
     name: 'Pinterest',
     icon: 'pinterest',
-    url: 'https://pinterest.com/',
+    url: PINTEREST,
     color: 'bg-red-700',
   },
-  { name: 'Twitter', icon: 'twitter', url: 'https://twitter.com/', color: 'bg-blue-400' },
+  { name: 'Twitter', icon: 'twitter', url: TWITTER, color: 'bg-blue-400' },
   {
     name: 'WordPress',
     icon: 'wordpress',
-    url: 'https://wordpress.org/',
+    url: WORDPRESS,
     color: 'bg-blue-600',
   },
   {
     name: 'Instagram',
     icon: 'instagram',
-    url: 'https://instagram.com/',
+    url: INSTAGRAM,
     color: 'bg-pink-600',
   },
 ]

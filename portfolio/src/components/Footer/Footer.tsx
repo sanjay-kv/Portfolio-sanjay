@@ -1,6 +1,15 @@
 import Link from 'next/link'
 import SocialIcon from '@/components/commmon/Icons'
-import { GITHUB, INSTAGRAM, LINKEDIN, MAIL, PINTEREST, TWITTER, WORDPRESS, YOUTUBE } from '@/constants/links'
+import {
+  GITHUB,
+  INSTAGRAM,
+  LINKEDIN,
+  MAIL,
+  PINTEREST,
+  TWITTER,
+  WORDPRESS,
+  YOUTUBE,
+} from '@/constants/links'
 
 const socialLinks = [
   { name: 'YouTube', icon: 'youtube', url: YOUTUBE, color: 'bg-red-600' },

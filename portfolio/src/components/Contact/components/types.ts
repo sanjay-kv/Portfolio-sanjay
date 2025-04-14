@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react"
+import { ChangeEvent } from 'react'
 
 export interface FormInputProps {
   id: string
@@ -7,13 +7,13 @@ export interface FormInputProps {
   onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
   error?: string
   type?: string
-  inputMode?: "text" | "email" | "tel" | "url" | "search" | "none"
+  inputMode?: 'text' | 'email' | 'tel' | 'url' | 'search' | 'none'
   placeholder?: string
   isTextarea?: boolean
 }
 
 export interface FormStatusProps {
-  status: "idle" | "success" | "error"
+  status: 'idle' | 'success' | 'error'
 }
 
 export interface SubmitButtonProps {

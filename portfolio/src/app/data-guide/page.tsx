@@ -1,5 +1,5 @@
-import DataGuidePage from "@/components/Data-Guide"
-import { Metadata } from "next"
+import DataGuidePage from '@/components/Data-Guide'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Data Guide',

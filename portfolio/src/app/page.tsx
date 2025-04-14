@@ -18,7 +18,7 @@ export default function Home() {
         {/* Hero headline */}
         <div className='flex items-center justify-center flex-col text-2xl sm:text-3xl md:text-4xl font-black tracking-widest pt-10 px-4 text-center'>
           <div>GET YOUR NEXT OPEN-SOURCE CONTRIBUTION FASTER.</div>
-          <UnderlineEffect stroke={'#243CE6'}/>
+          <UnderlineEffect stroke={'#243CE6'} />
           <div>MUCH FASTER.</div>
         </div>
 
@@ -42,7 +42,7 @@ export default function Home() {
           <div className='w-full pt-4 md:pt-10'>
             <Image
               className='w-full h-auto'
-              src='/sanjay-viswanathan-hero.png'
+              src='/assets/sanjay-viswanathan-hero.png'
               width={500}
               height={500}
               alt='Sanjay Viswanathan hero image'
@@ -52,7 +52,7 @@ export default function Home() {
           <div className='w-full pt-4 md:pt-10'>
             <Image
               className='w-full h-auto'
-              src='/sanjay-viswanathan-skills.png'
+              src='/assets/sanjay-viswanathan-skills.png'
               width={500}
               height={500}
               alt='Sanjay Viswanathan skills showcase'

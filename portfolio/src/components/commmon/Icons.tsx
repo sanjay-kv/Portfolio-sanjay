@@ -93,7 +93,13 @@ function SocialIcon({ name }: { name: string }) {
       )
     case 'discord':
       return (
-        <Image src={"/assets/discord.svg"} className="w-5 h-5 sm:w-6 sm:h-6" height="20" width="20" alt="Discord" />
+        <Image
+          src={'/assets/discord.svg'}
+          className='w-5 h-5 sm:w-6 sm:h-6'
+          height='20'
+          width='20'
+          alt='Discord'
+        />
       )
     default:
       return null

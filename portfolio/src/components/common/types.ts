@@ -6,5 +6,6 @@ export interface UnderlineEffectProps {
 export interface CircleStrokeTextProps {
   height: number
   width: number
+  textHeight?: string
   text: string
 }

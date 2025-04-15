@@ -6,7 +6,7 @@ import UnderlineEffect from '../common/UnderlineEffect'
 // Option Button Component
 const OptionButton = ({ text, clickHandler }: { text: string; clickHandler?: () => void }) => (
   <button
-    className='w-full bg-[#1DA1F2] text-white py-2 px-4 rounded-md mb-3 text-center font-medium hover:bg-blue-400 transition-colors'
+    className='w-full bg-[#1da1f2] text-foreground py-2 px-4 rounded-md mb-3 text-center font-medium hover:bg-blue-400 transition-colors'
     onClick={clickHandler}
   >
     {text}
@@ -14,7 +14,7 @@ const OptionButton = ({ text, clickHandler }: { text: string; clickHandler?: () 
 )
 
 const DataJourneyBody: React.FC = () => (
-  <div className='bg-background text-white w-full flex flex-col md:flex-row min-h-screen'>
+  <div className='bg-background text-foreground w-full flex flex-col md:flex-row min-h-screen'>
     {/* Left Column - 40% */}
     <div className='w-full md:w-[40%] px-6 relative flex flex-col items-center justify-start'>
       <div className='bg-radial px-16 py-20 md:py-32 md:px-20'>

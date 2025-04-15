@@ -49,4 +49,8 @@ body {
   .btn {
     @apply rounded-xl px-3 py-1.5 sm:px-5 sm:py-2 bg-primary text-foreground text-sm sm:text-base whitespace-nowrap
   }
+
+  .btn-secondary {
+    @apply rounded-xl px-3 py-1.5 sm:px-5 sm:py-2 bg-foreground text-background text-sm sm:text-base whitespace-nowrap
+  }
 }

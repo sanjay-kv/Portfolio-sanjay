@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@sanjay_k_v',
     creator: '@sanjay_k_v',
-    title: 'Sanjay Viswanathan',
+    title: 'Data Guide',
     description:
       'I am Sanjay K V, Data Driven Problem solver and Head of Content at recodehive.com, currently pushing limits to make Data Science Tutorials accessible to everyone.',
     images: ['https://sanjaykv.com/favicon.png'], // Must be an absolute URL
@@ -35,10 +35,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sanjaykv.com',
-    title: 'Sanjay Viswanathan',
+    title: 'Data Guide',
     description:
       'I am Sanjay K V, Data Driven Problem solver and Head of Content at recodehive.com, currently pushing limits to make Data Science Tutorials accessible to everyone.',
-    siteName: 'Sanjay Viswanathan',
+    siteName: 'Data Guide',
     images: [
       {
         url: 'https://sanjaykv.com/favicon.png',

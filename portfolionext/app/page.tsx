@@ -12,7 +12,7 @@ export default function Home() {
           YOUR OPEN-SOURCE GUIDE
         </button>
       </div>
-      <div className="flex bg-black flex-col items-center justify-center"> 
+      <div className="flex bg-background flex-col items-center justify-center"> 
         <div className="flex items-center justify-center flex-col text-4xl  font-black tracking-widest pt-10 ">
           <div>GET YOUR NEXT OPEN-SOURCE CONTRIBUTION FASTER.</div>
 

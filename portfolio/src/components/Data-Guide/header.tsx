@@ -1,6 +1,6 @@
 'use server'
 import React from 'react'
-import UnderlineEffect from '@/components/commmon/UnderlineEffect'
+import UnderlineEffect from '@/components/common/UnderlineEffect'
 
 const DataJourneyHeader: React.FC = () => (
   <header className='w-full text-foreground relative'>

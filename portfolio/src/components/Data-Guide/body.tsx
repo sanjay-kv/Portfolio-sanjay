@@ -1,7 +1,7 @@
 'use server'
-import CircleStrokeText from '../commmon/CircleStrokeText'
-import HighlightedText from '../commmon/HighlightedText'
-import UnderlineEffect from '../commmon/UnderlineEffect'
+import CircleStrokeText from '../common/CircleStrokeText'
+import HighlightedText from '../common/HighlightedText'
+import UnderlineEffect from '../common/UnderlineEffect'
 
 // Option Button Component
 const OptionButton = ({ text, clickHandler }: { text: string; clickHandler?: () => void }) => (

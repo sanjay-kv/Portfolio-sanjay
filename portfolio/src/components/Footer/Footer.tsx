@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import SocialIcon from '@/components/commmon/Icons'
+import SocialIcon from '@/components/common/Icons'
 import {
   GITHUB,
   INSTAGRAM,

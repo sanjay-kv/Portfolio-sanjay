@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { MapPin, Send } from 'lucide-react'
-import SocialIcon from '@/components/commmon/Icons'
+import SocialIcon from '@/components/common/Icons'
 import { DISCORD, INSTAGRAM, LINKEDIN, MAIL, TWITTER } from '@/constants/links'
 import ContactForm from './Form'
 

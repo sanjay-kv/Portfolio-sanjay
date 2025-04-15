@@ -1,4 +1,4 @@
-import UnderlineEffect from '@/components/commmon/UnderlineEffect'
+import UnderlineEffect from '@/components/common/UnderlineEffect'
 import Image from 'next/image'
 
 export default function Home() {

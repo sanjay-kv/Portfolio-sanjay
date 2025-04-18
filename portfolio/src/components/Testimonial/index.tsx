@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence } from 'framer-motion';
+import { TestimonialCarouselProps } from './types';
 
 const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
   testimonials,

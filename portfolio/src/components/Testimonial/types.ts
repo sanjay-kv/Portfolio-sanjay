@@ -1,4 +1,4 @@
-interface Testimonial {
+export interface Testimonial {
   id: string;
   name: string;
   avatarUrl?: string;
@@ -9,7 +9,7 @@ interface Testimonial {
   color?: string;
 }
 
-interface TestimonialCarouselProps {
+export interface TestimonialCarouselProps {
   testimonials: Testimonial[];
   autoplaySpeed?: number; // in ms
   pauseOnHover?: boolean;

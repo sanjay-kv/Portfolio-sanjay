@@ -1,4 +1,6 @@
 import UnderlineEffect from '@/components/common/UnderlineEffect'
+import TestimonialCarousel from '@/components/Testimonial'
+import { testimonials } from '@/lib/testimonialData'
 import Image from 'next/image'
 
 export default function Home() {
@@ -66,7 +68,7 @@ export default function Home() {
         </div>
 
         {/* Testimonial component placeholder */}
-        {/* <Testimonial/> */}
+        <TestimonialCarousel testimonials={testimonials} />
       </div>
     </div>
   )

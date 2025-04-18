@@ -23,6 +23,18 @@ export const socialLinks = [
     color: 'bg-blue-700'
   },
   {
+    name: 'Instagram',
+    icon: 'instagram',
+    url: INSTAGRAM,
+    color: 'bg-pink-600',
+  },
+  {
+    name: 'Twitter',
+    icon: 'twitter',
+    url: TWITTER,
+    color: 'bg-blue-400'
+  },
+  {
     name: 'GitHub',
     icon: 'github',
     url: GITHUB,
@@ -41,21 +53,9 @@ export const socialLinks = [
     color: 'bg-red-700',
   },
   {
-    name: 'Twitter',
-    icon: 'twitter',
-    url: TWITTER,
-    color: 'bg-blue-400'
-  },
-  {
     name: 'WordPress',
     icon: 'wordpress',
     url: WORDPRESS,
     color: 'bg-blue-600',
-  },
-  {
-    name: 'Instagram',
-    icon: 'instagram',
-    url: INSTAGRAM,
-    color: 'bg-pink-600',
-  },
+  }
 ]

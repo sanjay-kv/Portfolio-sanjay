@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Toaster } from 'react-hot-toast';
 import localFont from 'next/font/local'
 import './globals.css'
 import Navbar from '@/components/Navbar/Navbar'
@@ -96,6 +97,20 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Toaster
+          toastOptions={{
+            className: 'bg-gray-900 text-white',
+            duration: 3000,
+            position: 'top-right',
+            style: {
+              background: '#1a1a1a',
+              color: '#fff',
+              fontSize: '16px',
+              padding: '10px 20px',
+              borderRadius: '8px',
+            },
+          }}
+        />
       </body>
     </html>
   )

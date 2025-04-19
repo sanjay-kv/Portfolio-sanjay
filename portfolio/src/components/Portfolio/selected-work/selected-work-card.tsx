@@ -23,6 +23,7 @@ const PortfolioCard: React.FC<PortfolioWorkProps> = ({ work, index }) => {
       viewport={{ once: true, amount: 0.2 }}
       className="border border-gray-800 rounded-lg overflow-hidden shadow-xl bg-gray-900/60 hover:bg-gray-900/80 transition-colors"
       id={`work-${id}`}
+      tabIndex={0}
     >
       <div className="flex flex-col lg:flex-row">
         <div className="p-6 lg:p-8 lg:w-1/2 flex flex-col justify-start gap-y-4">

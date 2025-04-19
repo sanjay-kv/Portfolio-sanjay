@@ -24,6 +24,7 @@ const TechBadge: React.FC<{ name: string }> = ({ name }) => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={`${badgeColor} px-3 py-1 rounded-full text-sm font-medium inline-block`}
+      tabIndex={-1}
     >
       {name}
     </motion.span>

@@ -13,7 +13,7 @@ const PortfolioPage: React.FC<Props> = ({ searchParams }) => {
       : projects.filter((project) => project.category === activeTab);
 
   return (
-    <section className="min-h-screen text-foreground py-8 md:py-12">
+    <section className="min-h-screen text-foreground bg-background py-8 md:py-12 space-y-16">
       <Header />
       <LatestWorkSection
         activeTab={activeTab}

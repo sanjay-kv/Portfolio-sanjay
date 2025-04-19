@@ -29,7 +29,7 @@ const LatestWorkSection: React.FC<LatestWorkSectionProps> = ({ activeTab, filter
   };
 
   return (
-    <section className="bg-background text-foreground py-16">
+    <section className="py-16">
       <div className="container mx-auto px-4">
         {/* Portfolio Header */}
         <div className="text-center mb-12">

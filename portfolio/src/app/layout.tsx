@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast'
 import localFont from 'next/font/local'
 import './globals.css'
 import Navbar from '@/components/Navbar/Navbar'

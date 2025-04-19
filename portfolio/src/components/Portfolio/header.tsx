@@ -1,46 +1,43 @@
-import { socialLinks } from "@/lib/socialLinks"
+import { socialLinks } from '@/lib/socialLinks'
 import SocialIcon from '@/components/common/Icons'
-import Image from "next/image"
-import Link from "next/link"
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Header = () => (
-  <div className="w-full bg-primary text-foreground py-8 md:py-12">
-    <div className="container mx-auto px-4 md:px-6 lg:px-8">
-      <div className="flex flex-col lg:flex-row gap-8 items-center">
+  <div className='w-full bg-primary text-foreground py-8 md:py-12'>
+    <div className='container mx-auto px-4 md:px-6 lg:px-8'>
+      <div className='flex flex-col lg:flex-row gap-8 items-center'>
         {/* Left content */}
-        <div className="lg:w-2/3 space-y-6">
-          <div className="inline-block bg-background text-foreground px-3 py-1 text-sm font-mono">
+        <div className='lg:w-2/3 space-y-6'>
+          <div className='inline-block bg-background text-foreground px-3 py-1 text-sm font-mono'>
             If we haven&apos;t met
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider">
+          <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider'>
             HEY, IT&apos;S SANJAY VISWANATHAN HERE
           </h1>
 
-          <div className="space-y-4 text-sm md:text-base">
+          <div className='space-y-4 text-sm md:text-base'>
             <p>
-              I am Sanjay K V, worked as a Software Engineer for 3 years. I am
-              currently studying Masters in Data Science at the Macquarie University,
-              Australia.
+              I am Sanjay K V, worked as a Software Engineer for 3 years. I am currently studying
+              Masters in Data Science at the Macquarie University, Australia.
             </p>
 
             <p>
-              I enjoy exploring and seeking/giving out knowledge on Data
-              Science, gadgets and programming, more than that I love
-              working in community and doing webinars on the topic of ML,
-              AI, Data Science.
+              I enjoy exploring and seeking/giving out knowledge on Data Science, gadgets and
+              programming, more than that I love working in community and doing webinars on the
+              topic of ML, AI, Data Science.
             </p>
 
             <p>
-              I believe providing quality content to the right people at
-              the right time🕡. I started Recode Hive website which will
-              help you with updates on what&apos;s happening in the tech
-              industry💻
+              I believe providing quality content to the right people at the right time🕡. I started
+              Recode Hive website which will help you with updates on what&apos;s happening in the
+              tech industry💻
             </p>
           </div>
 
           {/* Social Icons */}
-          <div className="flex flex-wrap gap-3 pt-2">
+          <div className='flex flex-wrap gap-3 pt-2'>
             {socialLinks.map((social, index) =>
               index > 4 ? null : (
                 <Link
@@ -59,20 +56,21 @@ const Header = () => (
                 >
                   <SocialIcon name={social.icon} />
                 </Link>
-              ))}
+              )
+            )}
           </div>
         </div>
 
         {/* Right content - Profile Image */}
-        <div className="hidden sm:flex lg:w-1/3 justify-center lg:justify-end">
-          <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
+        <div className='hidden sm:flex lg:w-1/3 justify-center lg:justify-end'>
+          <div className='relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80'>
             <Image
-              src="/assets/sanjay-kv-profile.png"
-              alt="Sanjay Viswanathan"
+              src='/assets/sanjay-kv-profile.png'
+              alt='Sanjay Viswanathan'
               fill
-              className="object-cover"
+              className='object-cover'
               priority
-              sizes="(max-width: 768px) 12rem, (max-width: 1024px) 16rem, 20rem"
+              sizes='(max-width: 768px) 12rem, (max-width: 1024px) 16rem, 20rem'
             />
           </div>
         </div>

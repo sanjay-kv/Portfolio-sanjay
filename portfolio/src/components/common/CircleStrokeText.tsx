@@ -1,6 +1,11 @@
 import { CircleStrokeTextProps } from './types'
 
-const CircleStrokeText: React.FC<CircleStrokeTextProps> = ({ height = 41, width = 245, textHeight, text }) => {
+const CircleStrokeText: React.FC<CircleStrokeTextProps> = ({
+  height = 41,
+  width = 245,
+  textHeight,
+  text,
+}) => {
   return (
     <span className='inline-flex items-center justify-center relative' style={{ width, height }}>
       <svg
@@ -20,7 +25,9 @@ const CircleStrokeText: React.FC<CircleStrokeTextProps> = ({ height = 41, width 
           stroke='#2878F2'
         />
       </svg>
-      <span className={`relative text-lg sm:text-base md:text-lg font-bold px-2 text-foreground text-center z-10 whitespace-nowrap ${textHeight}`}>
+      <span
+        className={`relative text-lg sm:text-base md:text-lg font-bold px-2 text-foreground text-center z-10 whitespace-nowrap ${textHeight}`}
+      >
         {text}
       </span>
     </span>

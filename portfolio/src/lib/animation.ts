@@ -1,8 +1,8 @@
 interface FadeInProps {
-  direction: 'left' | 'right' | 'up' | 'down';
-  type: string;
-  delay: number;
-  duration: number;
+  direction: 'left' | 'right' | 'up' | 'down'
+  type: string
+  delay: number
+  duration: number
 }
 
 export const fadeIn = ({ direction, type, delay, duration }: FadeInProps) => {
@@ -23,8 +23,8 @@ export const fadeIn = ({ direction, type, delay, duration }: FadeInProps) => {
         ease: 'easeOut',
       },
     },
-  };
-};
+  }
+}
 
 export const staggerContainer = {
   hidden: {},
@@ -34,4 +34,4 @@ export const staggerContainer = {
       delayChildren: 0.2,
     },
   },
-};
+}

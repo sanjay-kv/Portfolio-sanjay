@@ -1,5 +1,5 @@
-import MyStoryPage from "@/components/My-Story"
-import { Metadata } from "next"
+import MyStoryPage from '@/components/My-Story'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'My Story',

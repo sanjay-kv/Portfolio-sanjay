@@ -14,13 +14,13 @@ export const socialLinks = [
     name: 'YouTube',
     icon: 'youtube',
     url: YOUTUBE,
-    color: 'bg-red-600'
+    color: 'bg-red-600',
   },
   {
     name: 'LinkedIn',
     icon: 'linkedin',
     url: LINKEDIN,
-    color: 'bg-blue-700'
+    color: 'bg-blue-700',
   },
   {
     name: 'Instagram',
@@ -32,19 +32,19 @@ export const socialLinks = [
     name: 'Twitter',
     icon: 'twitter',
     url: TWITTER,
-    color: 'bg-blue-400'
+    color: 'bg-blue-400',
   },
   {
     name: 'GitHub',
     icon: 'github',
     url: GITHUB,
-    color: 'bg-gray-800'
+    color: 'bg-gray-800',
   },
   {
     name: 'Mail',
     icon: 'mail',
     url: MAIL,
-    color: 'bg-blue-500'
+    color: 'bg-blue-500',
   },
   {
     name: 'Pinterest',
@@ -57,5 +57,5 @@ export const socialLinks = [
     icon: 'wordpress',
     url: WORDPRESS,
     color: 'bg-blue-600',
-  }
+  },
 ]

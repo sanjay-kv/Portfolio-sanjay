@@ -1,5 +1,5 @@
-import PortfolioPage from "@/components/Portfolio"
-import { Metadata } from "next"
+import PortfolioPage from '@/components/Portfolio'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -68,9 +68,7 @@ export const metadata: Metadata = {
   },
 }
 
-const Portfolio = ({ searchParams }: {
-  searchParams: { tab?: string };
-}) => {
+const Portfolio = ({ searchParams }: { searchParams: { tab?: string } }) => {
   return <PortfolioPage searchParams={searchParams} />
 }
 

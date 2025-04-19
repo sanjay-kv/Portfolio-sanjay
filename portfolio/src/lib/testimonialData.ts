@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
 // Schema validation for testimonials
 export const TestimonialSchema = z.object({
@@ -10,9 +10,9 @@ export const TestimonialSchema = z.object({
   content: z.string(),
   // date: z.string(),
   color: z.string().optional(),
-});
+})
 
-export type Testimonial = z.infer<typeof TestimonialSchema>;
+export type Testimonial = z.infer<typeof TestimonialSchema>
 
 // Mock data - in a real app, this would come from an API or CMS
 export const testimonials: Testimonial[] = [
@@ -21,7 +21,8 @@ export const testimonials: Testimonial[] = [
     name: 'NICOLEZ PHUA',
     initials: 'NP',
     rating: 2,
-    content: 'I actively participated in the 2-week sprint cohort, and although this was a free "test" of the exercise, it was short on content and information. The importance of having a mentor.',
+    content:
+      'I actively participated in the 2-week sprint cohort, and although this was a free "test" of the exercise, it was short on content and information. The importance of having a mentor.',
     color: 'bg-orange-500',
   },
   {
@@ -29,7 +30,8 @@ export const testimonials: Testimonial[] = [
     name: 'MIKAEL',
     initials: 'M',
     rating: 5,
-    content: 'Mo\'s mini course was very informative, guiding me in structuring and narrowing it down to more specific projects. The course also mentions weekly accountability check-ins as well which was a nice tip.',
+    content:
+      "Mo's mini course was very informative, guiding me in structuring and narrowing it down to more specific projects. The course also mentions weekly accountability check-ins as well which was a nice tip.",
     color: 'bg-purple-500',
   },
   {
@@ -37,7 +39,8 @@ export const testimonials: Testimonial[] = [
     name: 'DAVID K. WHITLOCK',
     initials: 'DW',
     rating: 5,
-    content: 'Your suggestions of what exactly to look for in finding a machine learning expert to help me with my project was invaluable. I\'ve talked to a number of experts since our call, and I\'m now much closer to finding someone who can help me.',
+    content:
+      "Your suggestions of what exactly to look for in finding a machine learning expert to help me with my project was invaluable. I've talked to a number of experts since our call, and I'm now much closer to finding someone who can help me.",
     color: 'bg-blue-500',
   },
   {
@@ -45,7 +48,8 @@ export const testimonials: Testimonial[] = [
     name: 'CAROLINA',
     initials: 'C',
     rating: 5,
-    content: 'Hi, I\'m so glad to find you, Mo. I didn\'t have a clear idea about my next step, but you provided amazing clarity. I really appreciate that you shared your experience with me, and the resources you recommended have been incredibly helpful.',
+    content:
+      "Hi, I'm so glad to find you, Mo. I didn't have a clear idea about my next step, but you provided amazing clarity. I really appreciate that you shared your experience with me, and the resources you recommended have been incredibly helpful.",
     color: 'bg-teal-500',
   },
   {
@@ -53,7 +57,8 @@ export const testimonials: Testimonial[] = [
     name: 'JAMES PETERSON',
     initials: 'JP',
     rating: 4,
-    content: 'The workshop exceeded my expectations. The practical exercises were particularly valuable, and I\'ve already implemented several of the techniques we learned into my daily workflow.',
+    content:
+      "The workshop exceeded my expectations. The practical exercises were particularly valuable, and I've already implemented several of the techniques we learned into my daily workflow.",
     color: 'bg-red-500',
   },
   {
@@ -61,7 +66,8 @@ export const testimonials: Testimonial[] = [
     name: 'SARAH THOMPSON',
     initials: 'ST',
     rating: 5,
-    content: 'Working with this team has transformed our approach to project management. The custom framework they developed for us has increased our efficiency by at least 30%.',
+    content:
+      'Working with this team has transformed our approach to project management. The custom framework they developed for us has increased our efficiency by at least 30%.',
     color: 'bg-green-500',
   },
   {
@@ -69,7 +75,8 @@ export const testimonials: Testimonial[] = [
     name: 'MICHAEL CHEN',
     initials: 'MC',
     rating: 5,
-    content: 'The technical mentorship program was exactly what I needed to level up my development skills. The personalized feedback on my code was invaluable.',
+    content:
+      'The technical mentorship program was exactly what I needed to level up my development skills. The personalized feedback on my code was invaluable.',
     color: 'bg-indigo-500',
   },
   {
@@ -77,7 +84,8 @@ export const testimonials: Testimonial[] = [
     name: 'EMMA RODRIGUEZ',
     initials: 'ER',
     rating: 4,
-    content: 'The UI/UX workshop series helped me understand design principles from a developer\'s perspective. I\'m now much more confident in creating user-friendly interfaces.',
+    content:
+      "The UI/UX workshop series helped me understand design principles from a developer's perspective. I'm now much more confident in creating user-friendly interfaces.",
     color: 'bg-pink-500',
   },
   {
@@ -85,7 +93,8 @@ export const testimonials: Testimonial[] = [
     name: 'ALEX KUMAR',
     initials: 'AK',
     rating: 5,
-    content: 'The cloud architecture consultation saved us months of trial and error. The solutions proposed were both cost-effective and scalable.',
+    content:
+      'The cloud architecture consultation saved us months of trial and error. The solutions proposed were both cost-effective and scalable.',
     color: 'bg-yellow-500',
   },
   {
@@ -93,7 +102,8 @@ export const testimonials: Testimonial[] = [
     name: 'LISA WONG',
     initials: 'LW',
     rating: 4,
-    content: 'The agile development bootcamp was intensive but incredibly rewarding. I\'ve successfully implemented these practices in my team.',
+    content:
+      "The agile development bootcamp was intensive but incredibly rewarding. I've successfully implemented these practices in my team.",
     color: 'bg-cyan-500',
   },
   {
@@ -101,7 +111,8 @@ export const testimonials: Testimonial[] = [
     name: 'THOMAS ANDERSON',
     initials: 'TA',
     rating: 5,
-    content: 'The DevOps pipeline optimization service dramatically improved our deployment efficiency. Our release cycle is now 60% faster.',
+    content:
+      'The DevOps pipeline optimization service dramatically improved our deployment efficiency. Our release cycle is now 60% faster.',
     color: 'bg-rose-500',
   },
   {
@@ -109,7 +120,8 @@ export const testimonials: Testimonial[] = [
     name: 'PRIYA PATEL',
     initials: 'PP',
     rating: 5,
-    content: 'The mobile app development workshop was comprehensive and practical. I appreciated the focus on cross-platform development strategies.',
+    content:
+      'The mobile app development workshop was comprehensive and practical. I appreciated the focus on cross-platform development strategies.',
     color: 'bg-emerald-500',
   },
   {
@@ -117,7 +129,8 @@ export const testimonials: Testimonial[] = [
     name: 'RYAN MITCHELL',
     initials: 'RM',
     rating: 4,
-    content: 'The security audit and consultation helped us identify and fix critical vulnerabilities. The documentation provided was thorough and actionable.',
+    content:
+      'The security audit and consultation helped us identify and fix critical vulnerabilities. The documentation provided was thorough and actionable.',
     color: 'bg-violet-500',
   },
   {
@@ -125,7 +138,8 @@ export const testimonials: Testimonial[] = [
     name: 'SOPHIA LEE',
     initials: 'SL',
     rating: 5,
-    content: 'The API design workshop changed how I think about building scalable backends. The best practices shared are now my go-to reference.',
+    content:
+      'The API design workshop changed how I think about building scalable backends. The best practices shared are now my go-to reference.',
     color: 'bg-amber-500',
   },
   {
@@ -133,10 +147,11 @@ export const testimonials: Testimonial[] = [
     name: 'MARCUS JOHNSON',
     initials: 'MJ',
     rating: 5,
-    content: 'The performance optimization consultation helped us reduce our application\'s load time by 40%. The ROI was immediate and significant.',
+    content:
+      "The performance optimization consultation helped us reduce our application's load time by 40%. The ROI was immediate and significant.",
     color: 'bg-lime-500',
-  }
-];
+  },
+]
 
 // app/page.tsx - Example usage with SSR
 // import { Suspense } from 'react';

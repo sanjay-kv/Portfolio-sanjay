@@ -1,5 +1,5 @@
-import MentorshipPage from "@/components/Mentorship"
-import { Metadata } from "next"
+import MentorshipPage from '@/components/Mentorship'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: '1-1 Mentorship',

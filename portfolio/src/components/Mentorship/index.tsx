@@ -1,5 +1,5 @@
-import Body from "./body"
-import Header from "./header"
+import Body from './body'
+import Header from './header'
 
 const MentorshipPage = () => {
   return (

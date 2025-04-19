@@ -17,7 +17,7 @@ const TechBadge: React.FC<{ name: string }> = ({ name }) => {
     default: 'bg-blue-500 text-white'
   };
 
-  const badgeColor = useMemo(() => colorMap[name] || colorMap.default, [name]);
+  const badgeColor = useMemo(() => colorMap[name] || colorMap.default, [name, colorMap]);
 
   return (
     <motion.span

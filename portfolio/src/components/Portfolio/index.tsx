@@ -2,7 +2,9 @@ import Header from "./header";
 import { projects, tabs } from "@/lib/projectsData";
 import { Project, Props, TabId } from "./types";
 import LatestWorkSection from "./latest-work";
-import SelectedWorkSection from "./selected-work/selected-work";
+import SelectedWorkSection from "./selected-work";
+import ContactSection from "./contact";
+import Toolbox from "./toolbox";
 
 const PortfolioPage: React.FC<Props> = ({ searchParams }) => {
   const activeTab = tabs.some(tab => tab.id === searchParams.tab) ? searchParams.tab as TabId : 'all';
@@ -20,6 +22,8 @@ const PortfolioPage: React.FC<Props> = ({ searchParams }) => {
         filteredProjects={filteredProjects}
       />
       <SelectedWorkSection />
+      <Toolbox />
+      <ContactSection />
     </section>
   );
 }

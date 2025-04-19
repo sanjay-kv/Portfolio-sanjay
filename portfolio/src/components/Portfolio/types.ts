@@ -22,6 +22,20 @@ export interface TabsNavigationProps {
   handleTabClick: (id: TabId) => void;
 }
 
+
+interface Work {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+}
+
+export interface PortfolioWorkProps {
+  work: Work;
+  index: number;
+}
+
 export type Project = z.infer<typeof ProjectSchema>;
 
 export const ProjectSchema = z.object({

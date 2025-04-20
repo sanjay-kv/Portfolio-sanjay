@@ -2,6 +2,7 @@ import UnderlineEffect from '@/components/common/UnderlineEffect'
 import TestimonialCarousel from '@/components/Testimonial'
 import { testimonials } from '@/lib/testimonialData'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
         {/* CTA section with gradient background */}
         <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 w-full max-w-[1223px] py-24 my-6 px-4 bg-radial'>
           <button className='btn'>Kick start your open-source</button>
-          <button className='btn'>1:1 MENTORSHIP</button>
+          <Link href={'/1-1-mentorship'} className='btn'>1:1 MENTORSHIP</Link>
         </div>
 
         {/* Image grid */}

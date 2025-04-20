@@ -78,9 +78,11 @@ const NotFound = () => {
         <p className="text-gray-500 max-w-md mx-auto">
           The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
-        <Link href={'/'} className="mt-8 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300">
-          Go Home
-        </Link>
+        <div className='mt-8'>
+          <Link href={'/'} className="mt-8 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300">
+            Go Home
+          </Link>
+        </div>
       </div>
     </div>
   );

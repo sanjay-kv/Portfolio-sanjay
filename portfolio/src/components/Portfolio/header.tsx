@@ -69,6 +69,7 @@ const Header = () => (
               alt='Sanjay Viswanathan'
               fill
               className='object-cover'
+              style={{ filter: 'drop-shadow(0 10px 8px rgba(15, 14, 14, 0.25))' }}
               priority
               sizes='(max-width: 768px) 12rem, (max-width: 1024px) 16rem, 20rem'
             />

@@ -10,7 +10,10 @@ const RightColumn: React.FC = () => (
         width={500}
         height={500}
         className='mx-auto transform rotateY-180'
-        style={{ transform: 'rotateY(180deg)' }}
+        style={{
+          transform: 'rotateY(180deg)',
+          filter: 'drop-shadow(0 10px 8px rgba(249, 246, 246, 0.25))'
+        }}
       />
     </div>
     <div className='text-center mt-12 text-lg'>

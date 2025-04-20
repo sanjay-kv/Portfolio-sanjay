@@ -9,6 +9,7 @@ const RightColumn: React.FC = () => (
         width={500}
         height={500}
         className='mx-auto'
+        style={{ filter: 'drop-shadow(0 10px 8px rgba(249, 246, 246, 0.25))' }}
       />
     </div>
     <div className='flex flex-col w-1/2 font-bold'>

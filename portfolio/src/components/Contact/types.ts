@@ -9,3 +9,10 @@ export type FormData = {
 }
 
 export type FormErrors = Partial<Record<keyof FormData, string>>
+
+export enum SubjectOption {
+  GeneralInquiry = 'General Inquiry',
+  Support = 'Support',
+  Sales = 'Sales',
+  Partnership = 'Partnership',
+}

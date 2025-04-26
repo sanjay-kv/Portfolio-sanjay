@@ -1,27 +1,12 @@
 'use client'
 
 import { useCallback, useState, type ChangeEvent, type FormEvent } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import FormInput from './components/form-input'
 import SubjectSelector from './components/subject-selector'
 import SubmitButton from './components/submit-button'
 import FormStatus from './components/form-status'
-
-type FormData = {
-  firstName: string
-  lastName: string
-  email: string
-  phone: string
-  subject: string
-  message: string
-}
-enum SubjectOption {
-  GeneralInquiry = 'General Inquiry',
-  Support = 'Support',
-  Sales = 'Sales',
-  Partnership = 'Partnership',
-}
-
-type FormErrors = Partial<Record<keyof FormData, string>>
+import { FormData, FormErrors, SubjectOption } from './types'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
@@ -94,6 +79,21 @@ export default function ContactForm() {
         // Simulate API call
         await new Promise((resolve) => setTimeout(resolve, 1500))
         setSubmitStatus('success')
+
+        // Reset form after successful submission
+        setTimeout(() => {
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            subject: 'General Inquiry',
+            message: '',
+          })
+
+          // Reset status after 5 seconds
+          setTimeout(() => setSubmitStatus('idle'), 5000)
+        }, 1000)
       } catch {
         setSubmitStatus('error')
       } finally {
@@ -103,46 +103,77 @@ export default function ContactForm() {
     [validateForm]
   )
 
+  const formVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  }
+
   return (
-    <div className='bg-background text-foreground p-6'>
-      <form onSubmit={handleSubmit} className='space-y-8'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="rounded-lg p-6"
+    >
+      <motion.h3
+        initial={{ y: -10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        className="text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500"
+      >
+        Send us a message
+      </motion.h3>
+
+      <motion.form
+        variants={formVariants}
+        initial="hidden"
+        animate="visible"
+        onSubmit={handleSubmit}
+        className="space-y-6"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormInput
-            id='firstName'
-            label='First Name'
+            id="firstName"
+            label="First Name"
             value={formData.firstName}
             onChange={handleInputChange}
             error={errors.firstName}
-            placeholder='Sanjay'
+            placeholder="Sanjay"
           />
 
           <FormInput
-            id='lastName'
-            label='Last Name'
+            id="lastName"
+            label="Last Name"
             value={formData.lastName}
             onChange={handleInputChange}
-            placeholder='KV'
+            placeholder="KV"
           />
 
           <FormInput
-            id='email'
-            label='Email'
-            type='email'
-            inputMode='email'
+            id="email"
+            label="Email"
+            type="email"
+            inputMode="email"
             value={formData.email}
             onChange={handleInputChange}
             error={errors.email}
-            placeholder='youremail@gmail.com'
+            placeholder="youremail@gmail.com"
           />
 
           <FormInput
-            id='phone'
-            label='Phone Number'
-            type='tel'
-            inputMode='tel'
+            id="phone"
+            label="Phone Number"
+            type="tel"
+            inputMode="tel"
             value={formData.phone}
             onChange={handleInputChange}
-            placeholder='+1 012 3456 789'
+            placeholder="+1 012 3456 789"
           />
         </div>
 
@@ -153,21 +184,38 @@ export default function ContactForm() {
         />
 
         <FormInput
-          id='message'
-          label='Message'
+          id="message"
+          label="Message"
           value={formData.message}
           onChange={handleInputChange}
           error={errors.message}
-          placeholder='Write your message..'
+          placeholder="Write your message here..."
           isTextarea
         />
 
-        <div className='flex justify-end'>
+        <motion.div
+          className="flex justify-end"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+        >
           <SubmitButton isSubmitting={isSubmitting} />
-        </div>
+        </motion.div>
 
-        <FormStatus status={submitStatus} />
-      </form>
-    </div>
+        <AnimatePresence>
+          {submitStatus !== 'idle' && (
+            <motion.div
+              key="status"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <FormStatus status={submitStatus} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.form>
+    </motion.div>
   )
 }

@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import Navbar from '@/components/Navbar/Navbar'
 import Footer from '@/components/Footer/Footer'
+import ScrollProgressIndicator from '@/components/common/ScrollProgressIndicator'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -97,6 +98,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <ScrollProgressIndicator />
         <Toaster
           toastOptions={{
             className: 'bg-gray-900 text-white',

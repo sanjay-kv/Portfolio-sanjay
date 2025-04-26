@@ -48,7 +48,7 @@ const OptionButton = ({
 }
 
 // Animated paragraph component
-const AnimatedParagraph = ({ children, delay = 0 }) => (
+const AnimatedParagraph = ({ children, delay = 0 }: { children: React.ReactNode; delay: number }) => (
   <motion.p
     className='text-lg'
     initial={{ opacity: 0, y: 20 }}

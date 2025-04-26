@@ -1,6 +1,6 @@
-'use client';
-import { motion } from 'framer-motion';
-import { CircleStrokeTextProps } from './types';
+'use client'
+import { motion } from 'framer-motion'
+import { CircleStrokeTextProps } from './types'
 
 const CircleStrokeText: React.FC<CircleStrokeTextProps> = ({
   height = 41,
@@ -18,15 +18,15 @@ const CircleStrokeText: React.FC<CircleStrokeTextProps> = ({
       opacity: 1,
       transition: {
         duration: 1.8,
-        ease: "easeInOut",
-      }
-    }
-  };
+        ease: 'easeInOut',
+      },
+    },
+  }
 
   const textVariants = {
     hidden: {
       opacity: 0,
-      y: 10
+      y: 10,
     },
     visible: {
       opacity: 1,
@@ -34,17 +34,17 @@ const CircleStrokeText: React.FC<CircleStrokeTextProps> = ({
       transition: {
         delay: 0.2,
         duration: 0.3,
-        ease: "easeOut"
-      }
-    }
-  };
+        ease: 'easeOut',
+      },
+    },
+  }
 
   return (
     <motion.span
       className='inline-flex items-center justify-center relative'
       style={{ width, height }}
-      initial="hidden"
-      whileInView="visible"
+      initial='hidden'
+      whileInView='visible'
       viewport={{ once: true, amount: 0.6 }}
     >
       <motion.svg
@@ -73,7 +73,7 @@ const CircleStrokeText: React.FC<CircleStrokeTextProps> = ({
         {text}
       </motion.span>
     </motion.span>
-  );
-};
+  )
+}
 
-export default CircleStrokeText;
+export default CircleStrokeText

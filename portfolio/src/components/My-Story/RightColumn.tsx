@@ -12,7 +12,7 @@ const RightColumn: React.FC = () => (
         className='mx-auto transform rotateY-180'
         style={{
           transform: 'rotateY(180deg)',
-          filter: 'drop-shadow(0 10px 8px rgba(249, 246, 246, 0.25))'
+          filter: 'drop-shadow(0 10px 8px rgba(249, 246, 246, 0.25))',
         }}
       />
     </div>

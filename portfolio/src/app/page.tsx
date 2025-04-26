@@ -17,12 +17,12 @@ export default function Home() {
   // Parallax effects for different sections
   const { scrollYProgress: heroScrollProgress } = useScroll({
     target: heroRef,
-    offset: ["start end", "end start"]
+    offset: ['start end', 'end start'],
   })
 
   const { scrollYProgress: imageGridScrollProgress } = useScroll({
     target: imageGridRef,
-    offset: ["start end", "end start"]
+    offset: ['start end', 'end start'],
   })
 
   // Transform values for parallax effects
@@ -41,7 +41,7 @@ export default function Home() {
         className='bg-[#A4D2FB] h-2'
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
-        transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+        transition={{ delay: 0.2, duration: 0.8, ease: 'easeOut' }}
       />
 
       {/* Header section with fade-in */}
@@ -52,11 +52,7 @@ export default function Home() {
         transition={{ delay: 0.4, duration: 0.6 }}
       >
         <div className='text-xl sm:text-2xl font-extrabold'>Sanjay Viswanathan</div>
-        <motion.button
-          className='btn'
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.98 }}
-        >
+        <motion.button className='btn' whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
           YOUR OPEN-SOURCE GUIDE
         </motion.button>
       </motion.div>
@@ -113,13 +109,18 @@ export default function Home() {
         >
           <motion.button
             className='btn'
-            whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)" }}
+            whileHover={{ scale: 1.05, boxShadow: '0px 5px 15px rgba(0, 0, 0, 0.1)' }}
             whileTap={{ scale: 0.98 }}
           >
             Kick start your open-source
           </motion.button>
-          <motion.div whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)" }} whileTap={{ scale: 0.98 }}>
-            <Link href={'/1-1-mentorship'} className='btn'>1:1 MENTORSHIP</Link>
+          <motion.div
+            whileHover={{ scale: 1.05, boxShadow: '0px 5px 15px rgba(0, 0, 0, 0.1)' }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Link href={'/1-1-mentorship'} className='btn'>
+              1:1 MENTORSHIP
+            </Link>
           </motion.div>
         </motion.div>
 
@@ -137,7 +138,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <motion.div
-              whileHover={{ scale: 1.02, boxShadow: "0px 10px 25px rgba(0, 0, 0, 0.1)" }}
+              whileHover={{ scale: 1.02, boxShadow: '0px 10px 25px rgba(0, 0, 0, 0.1)' }}
               transition={{ duration: 0.3 }}
             >
               <Image
@@ -159,7 +160,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.div
-              whileHover={{ scale: 1.02, boxShadow: "0px 10px 25px rgba(0, 0, 0, 0.1)" }}
+              whileHover={{ scale: 1.02, boxShadow: '0px 10px 25px rgba(0, 0, 0, 0.1)' }}
               transition={{ duration: 0.3 }}
             >
               <Image

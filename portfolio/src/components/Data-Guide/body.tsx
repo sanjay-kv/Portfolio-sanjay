@@ -1,21 +1,21 @@
-'use client';
-import { useState, useRef } from 'react';
-import { motion, useScroll, useTransform, useInView } from 'framer-motion';
-import CircleStrokeText from '../common/CircleStrokeText';
-import HighlightedText from '../common/HighlightedText';
-import UnderlineEffect from '../common/UnderlineEffect';
+'use client'
+import { useState, useRef } from 'react'
+import { motion, useScroll, useTransform, useInView } from 'framer-motion'
+import CircleStrokeText from '../common/CircleStrokeText'
+import HighlightedText from '../common/HighlightedText'
+import UnderlineEffect from '../common/UnderlineEffect'
 
 // Option Button Component with Animation
 const OptionButton = ({
   text,
   clickHandler,
   isActive = false,
-  index = 0
+  index = 0,
 }: {
-  text: string;
-  clickHandler?: () => void;
-  isActive?: boolean;
-  index?: number;
+  text: string
+  clickHandler?: () => void
+  isActive?: boolean
+  index?: number
 }) => {
   return (
     <motion.button
@@ -26,58 +26,58 @@ const OptionButton = ({
       transition={{
         duration: 0.5,
         delay: index * 0.1,
-        type: "spring",
-        stiffness: 120
+        type: 'spring',
+        stiffness: 120,
       }}
       whileHover={{
         scale: 1.05,
-        transition: { duration: 0.2 }
+        transition: { duration: 0.2 },
       }}
       whileTap={{ scale: 0.95 }}
       viewport={{ once: true }}
     >
       <motion.div
-        className="absolute inset-0 bg-white opacity-20"
-        initial={{ x: "-100%" }}
-        whileHover={{ x: "100%" }}
+        className='absolute inset-0 bg-white opacity-20'
+        initial={{ x: '-100%' }}
+        whileHover={{ x: '100%' }}
         transition={{ duration: 0.4 }}
       />
       {text}
     </motion.button>
-  );
-};
+  )
+}
 
 // Animated paragraph component
 const AnimatedParagraph = ({ children, delay = 0 }) => (
   <motion.p
-    className="text-lg"
+    className='text-lg'
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{
       duration: 0.7,
       delay: delay,
-      ease: "easeOut"
+      ease: 'easeOut',
     }}
     viewport={{ once: true, amount: 0.2 }}
   >
     {children}
   </motion.p>
-);
+)
 
 const DataJourneyBody: React.FC = () => {
-  const [activeOption, setActiveOption] = useState('ALL');
-  const containerRef = useRef(null);
-  const titleRef = useRef(null);
-  const isTitleInView = useInView(titleRef, { once: true, amount: 0.5 });
+  const [activeOption, setActiveOption] = useState('ALL')
+  const containerRef = useRef(null)
+  const titleRef = useRef(null)
+  const isTitleInView = useInView(titleRef, { once: true, amount: 0.5 })
 
   // Scroll-based parallax effect
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"]
-  });
+    offset: ['start end', 'end start'],
+  })
 
-  const leftColumnY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
-  const rightColumnOpacity = useTransform(scrollYProgress, [0, 0.2], [0.8, 1]);
+  const leftColumnY = useTransform(scrollYProgress, [0, 1], ['0%', '10%'])
+  const rightColumnOpacity = useTransform(scrollYProgress, [0, 0.2], [0.8, 1])
 
   return (
     <motion.div
@@ -170,16 +170,15 @@ const DataJourneyBody: React.FC = () => {
               What if I told you I have the ultimate package to land your dream data job?
             </motion.h2>
 
-            <AnimatedParagraph delay={0.1}>
-              The Ultimate Data Portfolio.
-            </AnimatedParagraph>
+            <AnimatedParagraph delay={0.1}>The Ultimate Data Portfolio.</AnimatedParagraph>
 
             <AnimatedParagraph delay={0.2}>
               Together with 6 bonuses covering every aspect of data analysis.
             </AnimatedParagraph>
 
             <AnimatedParagraph delay={0.3}>
-              From the first time you think about having a data career to climbing the career ladder in the data world.
+              From the first time you think about having a data career to climbing the career ladder
+              in the data world.
             </AnimatedParagraph>
 
             <AnimatedParagraph delay={0.4}>
@@ -191,13 +190,13 @@ const DataJourneyBody: React.FC = () => {
                 transition={{
                   duration: 0.5,
                   delay: 0.6,
-                  type: "spring",
-                  stiffness: 200
+                  type: 'spring',
+                  stiffness: 200,
                 }}
                 viewport={{ once: true }}
                 whileHover={{
                   scale: 1.1,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 },
                 }}
               >
                 GET the job you want.
@@ -215,8 +214,8 @@ const DataJourneyBody: React.FC = () => {
               transition={{ duration: 0.7, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              The <CircleStrokeText height={52} width={262} text='ULTIMATE DATA ROADMAP' /> will help
-              you with your first formula in Excel.
+              The <CircleStrokeText height={52} width={262} text='ULTIMATE DATA ROADMAP' /> will
+              help you with your first formula in Excel.
             </motion.h3>
 
             <AnimatedParagraph delay={0.2}>
@@ -227,17 +226,11 @@ const DataJourneyBody: React.FC = () => {
               Not only that, but you&apos;ll be exploring DAX in Power BI.
             </AnimatedParagraph>
 
-            <AnimatedParagraph delay={0.3}>
-              Creating Scatter Plots in Tableau.
-            </AnimatedParagraph>
+            <AnimatedParagraph delay={0.3}>Creating Scatter Plots in Tableau.</AnimatedParagraph>
 
-            <AnimatedParagraph delay={0.35}>
-              Writing entire scripts in Python.
-            </AnimatedParagraph>
+            <AnimatedParagraph delay={0.35}>Writing entire scripts in Python.</AnimatedParagraph>
 
-            <AnimatedParagraph delay={0.4}>
-              But that&apos;s just the beginning.
-            </AnimatedParagraph>
+            <AnimatedParagraph delay={0.4}>But that&apos;s just the beginning.</AnimatedParagraph>
 
             <AnimatedParagraph delay={0.45}>
               It has Analytical Knowledge and Critical Thinking modules.
@@ -267,9 +260,7 @@ const DataJourneyBody: React.FC = () => {
               />
             </motion.div>
 
-            <AnimatedParagraph delay={0.3}>
-              The stats don&apos;t lie.
-            </AnimatedParagraph>
+            <AnimatedParagraph delay={0.3}>The stats don&apos;t lie.</AnimatedParagraph>
 
             <motion.q
               className='text-lg italic block'
@@ -278,17 +269,15 @@ const DataJourneyBody: React.FC = () => {
               transition={{
                 duration: 0.7,
                 delay: 0.4,
-                type: "spring",
-                stiffness: 100
+                type: 'spring',
+                stiffness: 100,
               }}
               viewport={{ once: true }}
             >
               Interviewees with no knowledge of the company get rejected by 47% of recruiters.
             </motion.q>
 
-            <AnimatedParagraph delay={0.5}>
-              But you will be ready.
-            </AnimatedParagraph>
+            <AnimatedParagraph delay={0.5}>But you will be ready.</AnimatedParagraph>
 
             <AnimatedParagraph delay={0.6}>
               For the more experienced and knowledgeable, I&apos;ve made it even easier.
@@ -297,7 +286,7 @@ const DataJourneyBody: React.FC = () => {
         </div>
       </motion.div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default DataJourneyBody;
+export default DataJourneyBody

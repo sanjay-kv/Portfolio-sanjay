@@ -1,15 +1,15 @@
-'use client';
-import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import UnderlineEffect from '@/components/common/UnderlineEffect';
+'use client'
+import React from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import UnderlineEffect from '@/components/common/UnderlineEffect'
 
 const DataJourneyHeader: React.FC = () => {
-  const { scrollY } = useScroll();
+  const { scrollY } = useScroll()
 
   // Create scroll-based animations
-  const headerOpacity = useTransform(scrollY, [0, 300], [1, 0.7]);
-  const headerScale = useTransform(scrollY, [0, 300], [1, 0.97]);
-  const gridOpacity = useTransform(scrollY, [0, 200], [1, 0.4]);
+  const headerOpacity = useTransform(scrollY, [0, 300], [1, 0.7])
+  const headerScale = useTransform(scrollY, [0, 300], [1, 0.97])
+  const gridOpacity = useTransform(scrollY, [0, 200], [1, 0.4])
 
   // Grid animation variants
   const gridBackgroundVariants = {
@@ -18,10 +18,10 @@ const DataJourneyHeader: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 1,
-        ease: "easeInOut"
-      }
-    }
-  };
+        ease: 'easeInOut',
+      },
+    },
+  }
 
   // Text animation variants
   const titleVariants = {
@@ -32,10 +32,10 @@ const DataJourneyHeader: React.FC = () => {
       transition: {
         duration: 0.8,
         delay: 0.3,
-        ease: "easeOut"
-      }
-    }
-  };
+        ease: 'easeOut',
+      },
+    },
+  }
 
   const subtitleVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -45,23 +45,23 @@ const DataJourneyHeader: React.FC = () => {
       transition: {
         duration: 0.8,
         delay: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
+        ease: 'easeOut',
+      },
+    },
+  }
 
   return (
     <motion.header
       className='w-full text-foreground relative'
       style={{ opacity: headerOpacity, scale: headerScale }}
-      initial="hidden"
-      animate="visible"
+      initial='hidden'
+      animate='visible'
     >
       <motion.div
         className='bg-[#A4D2FB] h-2'
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
+        transition={{ duration: 1.2, ease: 'easeInOut' }}
       />
 
       {/* Grid background */}
@@ -76,7 +76,7 @@ const DataJourneyHeader: React.FC = () => {
           backgroundPosition: 'center',
           backgroundRepeat: 'repeat',
           zIndex: '-1',
-          opacity: gridOpacity
+          opacity: gridOpacity,
         }}
         variants={gridBackgroundVariants}
       />
@@ -110,13 +110,13 @@ const DataJourneyHeader: React.FC = () => {
                 transition: {
                   delay: 0.8,
                   duration: 0.3,
-                }
+                },
               }}
             >
               Click on the
             </motion.span>{' '}
             <motion.span
-              className="font-bold"
+              className='font-bold'
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{
                 opacity: 1,
@@ -124,14 +124,14 @@ const DataJourneyHeader: React.FC = () => {
                 transition: {
                   delay: 1,
                   duration: 0.4,
-                  type: "spring",
-                  stiffness: 200
-                }
+                  type: 'spring',
+                  stiffness: 200,
+                },
               }}
               whileHover={{
                 scale: 1.1,
-                color: "#2878F2",
-                transition: { duration: 0.2 }
+                color: '#2878F2',
+                transition: { duration: 0.2 },
               }}
             >
               BUTTONS
@@ -143,7 +143,7 @@ const DataJourneyHeader: React.FC = () => {
                 transition: {
                   delay: 1.2,
                   duration: 0.3,
-                }
+                },
               }}
             >
               to learn more
@@ -152,7 +152,7 @@ const DataJourneyHeader: React.FC = () => {
         </div>
       </div>
     </motion.header>
-  );
-};
+  )
+}
 
-export default DataJourneyHeader;
+export default DataJourneyHeader

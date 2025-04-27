@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { MapPin, Send, Mail } from 'lucide-react'
 import SocialIcon from '@/components/common/Icons'
-import { DISCORD, INSTAGRAM, LINKEDIN, MAIL, TWITTER } from '@/constants/links'
+import { ADDRESS, DISCORD, INSTAGRAM, LINKEDIN, MAIL, TWITTER } from '@/constants/links'
 import ContactForm from './Form'
 import { motion } from 'framer-motion'
 
@@ -122,7 +122,7 @@ const ContactPage = () => {
                     <Mail className="w-5 h-5 text-white" />
                   </motion.div>
                   <Link href={MAIL} className="text-white hover:text-blue-200 transition-colors">
-                    sanjay@recoderlive.com
+                    {MAIL.split(':')[1]}
                   </Link>
                 </motion.div>
 
@@ -134,7 +134,7 @@ const ContactPage = () => {
                   >
                     <MapPin className="w-5 h-5 text-white" />
                   </motion.div>
-                  <span>MQ, Sydney, Australia</span>
+                  <span>{ADDRESS}</span>
                 </motion.div>
               </motion.div>
             </div>

@@ -50,7 +50,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
   return (
     <section
       aria-labelledby='testimonials-title'
-      className='bg-primary py-12 px-4 mb-12 sm:px-6 lg:px-8 overflow-hidden relative'
+      className='py-12 px-4 mb-12 sm:px-6 lg:px-8 overflow-hidden relative'
       ref={inViewRef}
     >
       <div

@@ -10,7 +10,11 @@ const Journey: React.FC = () => {
   const handleToggle = (index: number) => {
     setOpenIndices(prev => {
       const newSet = new Set(prev)
-      newSet.has(index) ? newSet.delete(index) : newSet.add(index)
+      if (newSet.has(index)) {
+        newSet.delete(index)
+      } else {
+        newSet.add(index)
+      }
       return newSet
     });
   };

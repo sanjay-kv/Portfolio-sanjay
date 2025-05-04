@@ -3,7 +3,6 @@ import { useState } from "react"
 import AccordionItem from "@/components/common/Accordian"
 import CircleStrokeText from "@/components/common/CircleStrokeText"
 import { accordianData } from "@/lib/accordianData"
-import UnderlineEffect from "@/components/common/UnderlineEffect"
 
 const Journey2: React.FC = () => {
   const [openIndices, setOpenIndices] = useState<Set<number>>(new Set([0]))
@@ -11,7 +10,11 @@ const Journey2: React.FC = () => {
   const handleToggle = (index: number) => {
     setOpenIndices(prev => {
       const newSet = new Set(prev)
-      newSet.has(index) ? newSet.delete(index) : newSet.add(index)
+      if (newSet.has(index)) {
+        newSet.delete(index)
+      } else {
+        newSet.add(index)
+      }
       return newSet
     });
   };

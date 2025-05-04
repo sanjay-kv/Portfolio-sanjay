@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     'I am Sanjay K V, Data Driven Problem solver and Head of Content at recodehive.com, currently pushing limits to make Data Science Tutorials accessible to everyone.',
   referrer: 'origin-when-cross-origin',
   keywords: ['Sanjay Viswanathan', 'tech', 'influencer', 'portfolio'],
+  manifest: '/manifest.json',
   authors: [{ name: 'Sanjay Viswanathan', url: new URL('https://github.com/sanjay-kv') }],
   icons: {
     icon: [

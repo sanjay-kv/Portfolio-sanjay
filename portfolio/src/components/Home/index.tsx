@@ -46,12 +46,11 @@ export default function HomePage() {
 
       {/* Header section with fade-in */}
       <motion.div
-        className='bg-header flex items-center justify-between px-4 sm:px-8 md:px-16 py-5 flex-wrap gap-4'
+        className='bg-header flex items-center justify-end px-4 sm:px-8 md:px-16 py-5 flex-wrap gap-4'
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.6 }}
       >
-        <div className='text-xl sm:text-2xl font-extrabold'>Sanjay Viswanathan</div>
         <motion.button className='btn' whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
           YOUR OPEN-SOURCE GUIDE
         </motion.button>

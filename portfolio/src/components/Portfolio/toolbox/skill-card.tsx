@@ -1,23 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-
-interface Skill {
-  title: string
-  skills: string[]
-}
-
-interface SkillCardProps {
-  category: Skill
-  index: number
-}
+import { SkillCardProps } from '../types'
+import { cn } from '@/lib/utils'
 
 const SkillCard: React.FC<SkillCardProps> = ({ category, index }) => {
-  // Position cards in a staggered arrangement
   const positions = [
     'left-1/3 -translate-x-1/2', // Languages
-    'left-1/2 translate-x-[-40%] translate-y-12', // Front End
-    'left-3/5 translate-y-6', // Back End
+    'left-1/2 -translate-y-2 md:translate-x-[-40%] md:translate-y-12', // Front End
+    'translate-y-[90%] left-2/5 md:left-3/5 md:translate-y-6', // Back End
   ]
 
   const colors = [
@@ -27,14 +18,14 @@ const SkillCard: React.FC<SkillCardProps> = ({ category, index }) => {
   ]
 
   const titleColors = [
-    'text-gray-700', // Dark text for light backgrounds
+    'text-gray-700',
     'text-gray-700',
     'text-gray-700',
   ]
 
   return (
     <motion.div
-      className={`absolute ${positions[index]} w-72 md:w-80 rounded-xl shadow-lg ${colors[index]} overflow-hidden`}
+      className={cn('absolute w-52 md:w-80 rounded-xl shadow-lg overflow-hidden', positions[index], colors[index])}
       initial={{ opacity: 0, y: 50, rotate: index === 0 ? -5 : index === 2 ? 5 : 0 }}
       animate={{ opacity: 1, y: 0, rotate: index === 0 ? -5 : index === 2 ? 5 : 0 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}

@@ -35,6 +35,16 @@ export interface PortfolioWorkProps {
   index: number
 }
 
+interface Skill {
+  title: string
+  skills: string[]
+}
+
+export interface SkillCardProps {
+  category: Skill
+  index: number
+}
+
 export type Project = z.infer<typeof ProjectSchema>
 
 export const ProjectSchema = z.object({

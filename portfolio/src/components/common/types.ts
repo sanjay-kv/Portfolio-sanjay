@@ -1,11 +1,11 @@
 export interface UnderlineEffectProps {
-  stroke: string
+  stroke?: string
   className?: string
 }
 
 export interface CircleStrokeTextProps {
-  height: number
-  width: number
+  height?: number
+  width?: number
   textHeight?: string
   text: string
 }
@@ -19,4 +19,12 @@ export interface ImageProps {
 
 export interface MasonryGridProps {
   images: ImageProps[]
+}
+
+export interface AccordionItemProps {
+  index: number
+  title: string
+  isOpen: boolean
+  onClick: (index: number) => void
+  children: React.ReactNode
 }

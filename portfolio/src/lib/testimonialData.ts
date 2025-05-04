@@ -8,13 +8,11 @@ export const TestimonialSchema = z.object({
   initials: z.string().optional(),
   rating: z.number().min(1).max(5),
   content: z.string(),
-  // date: z.string(),
   color: z.string().optional(),
 })
 
 export type Testimonial = z.infer<typeof TestimonialSchema>
 
-// Mock data - in a real app, this would come from an API or CMS
 export const testimonials: Testimonial[] = [
   {
     id: '1',

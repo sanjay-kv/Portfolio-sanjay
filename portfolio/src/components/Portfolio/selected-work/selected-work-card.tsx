@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import TechBadge from './tech-badges'
+import TechBadge from '@/components/common/TechBadge'
 import { fadeIn } from '@/lib/animation'
 import { PortfolioWorkProps } from '../types'
 import { memo, useMemo } from 'react'

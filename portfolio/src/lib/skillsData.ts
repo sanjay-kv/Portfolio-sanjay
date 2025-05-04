@@ -23,7 +23,7 @@ export const skillsData: SkillsData = [
   },
   {
     title: 'Front End',
-    skills: ['React.js', 'Next.js', 'Bootstrap', 'Tailwind'],
+    skills: ['React', 'Next.js', 'Bootstrap', 'Tailwind'],
   },
   {
     title: 'Back End',

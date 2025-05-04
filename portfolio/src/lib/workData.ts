@@ -5,7 +5,7 @@ export const workData = [
     description:
       'Platform for users seeking design inspiration for their personal web portfolios through visualizing endless real-world portfolios.',
     image: '/assets/work/linkfolio.png',
-    technologies: ['Next.js', 'React.js', 'Tailwind', 'Firebase', 'Zustand', 'Puppeteer'],
+    technologies: ['Next.js', 'React', 'Tailwind', 'Firebase', 'Zustand', 'Puppeteer'],
   },
   {
     id: 'harbor',
@@ -15,7 +15,7 @@ export const workData = [
     image: '/assets/work/harbor.png',
     technologies: [
       'Next.js',
-      'React.js',
+      'React',
       'Tailwind',
       'Firebase',
       'Zustand',
@@ -31,6 +31,6 @@ export const workData = [
     description:
       'Subscription-based service that allows users to enter Amazon product URLs to have them actively scraped for better prices, receiving notifications when price is low.',
     image: '/assets/work/clinkz.png',
-    technologies: ['Next.js', 'React.js', 'Tailwind', 'Zustand', 'Shadcnui', 'NextAuth'],
+    technologies: ['Next.js', 'React', 'Tailwind', 'Zustand', 'Shadcnui', 'NextAuth'],
   },
 ]

@@ -9,3 +9,14 @@ export interface CircleStrokeTextProps {
   textHeight?: string
   text: string
 }
+
+export interface ImageProps {
+  src: string
+  alt: string
+  width: number
+  height: number
+}
+
+export interface MasonryGridProps {
+  images: ImageProps[]
+}

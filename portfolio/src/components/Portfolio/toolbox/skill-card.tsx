@@ -17,15 +17,15 @@ const SkillCard: React.FC<SkillCardProps> = ({ category, index }) => {
     'bg-yellow-100', // Light yellow for Back End
   ]
 
-  const titleColors = [
-    'text-gray-700',
-    'text-gray-700',
-    'text-gray-700',
-  ]
+  const titleColors = ['text-gray-700', 'text-gray-700', 'text-gray-700']
 
   return (
     <motion.div
-      className={cn('absolute w-52 md:w-80 rounded-xl shadow-lg overflow-hidden', positions[index], colors[index])}
+      className={cn(
+        'absolute w-52 md:w-80 rounded-xl shadow-lg overflow-hidden',
+        positions[index],
+        colors[index]
+      )}
       initial={{ opacity: 0, y: 50, rotate: index === 0 ? -5 : index === 2 ? 5 : 0 }}
       animate={{ opacity: 1, y: 0, rotate: index === 0 ? -5 : index === 2 ? 5 : 0 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}

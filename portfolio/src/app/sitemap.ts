@@ -35,14 +35,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/1-1-mentorship`,
       changeFrequency: 'monthly',
       priority: 0.7,
-    }
+    },
   ]
 
-  const dynamicProjectRoutes: MetadataRoute.Sitemap = projectData.projects.map((project: Project) => ({
-    url: `${baseUrl}/projects/${project.slug}`,
-    changeFrequency: 'monthly',
-    priority: 0.6,
-  }))
+  const dynamicProjectRoutes: MetadataRoute.Sitemap = projectData.projects.map(
+    (project: Project) => ({
+      url: `${baseUrl}/projects/${project.slug}`,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    })
+  )
 
   return [...staticRoutes, ...dynamicProjectRoutes]
 }

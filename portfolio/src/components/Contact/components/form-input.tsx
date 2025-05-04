@@ -18,8 +18,9 @@ export default function FormInput({
     name: id,
     value,
     onChange,
-    className: `w-full bg-transparent border-b ${error ? 'border-red-400' : 'border-gray-600'
-      } focus:border-[#1DA1F2] outline-none py-2 px-0 transition-colors`,
+    className: `w-full bg-transparent border-b ${
+      error ? 'border-red-400' : 'border-gray-600'
+    } focus:border-[#1DA1F2] outline-none py-2 px-0 transition-colors`,
     placeholder,
   }
 
@@ -28,9 +29,10 @@ export default function FormInput({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="relative mb-6"
+      className='relative mb-6'
     >
-      <motion.label htmlFor={id}
+      <motion.label
+        htmlFor={id}
         initial={{ x: -10, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.1 }}
@@ -44,19 +46,29 @@ export default function FormInput({
           {...commonProps}
           rows={1}
           whileFocus={{ scale: 1.01 }}
-          transition={{ type: "spring", stiffness: 300 }}
+          transition={{ type: 'spring', stiffness: 300 }}
           className={cn(commonProps.className, 'resize-none min-h-[55px]')}
         />
       ) : (
-        <motion.input {...commonProps} type={type} inputMode={inputMode} whileFocus={{ scale: 1.01 }}
-          transition={{ type: "spring", stiffness: 300 }} />
+        <motion.input
+          {...commonProps}
+          type={type}
+          inputMode={inputMode}
+          whileFocus={{ scale: 1.01 }}
+          transition={{ type: 'spring', stiffness: 300 }}
+        />
       )}
 
-      {error && <motion.p initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: 1, height: "auto" }}
-        exit={{ opacity: 0, height: 0 }}
-        className='mt-1 text-sm text-red-500'>{error}</motion.p>
-      }
+      {error && (
+        <motion.p
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          className='mt-1 text-sm text-red-500'
+        >
+          {error}
+        </motion.p>
+      )}
     </motion.div>
   )
 }

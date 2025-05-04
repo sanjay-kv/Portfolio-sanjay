@@ -27,7 +27,7 @@ const LatestWorkSection: React.FC<LatestWorkSectionProps> = ({ activeTab, filter
   }
 
   return (
-    <section className='py-16' id="latest-work">
+    <section className='py-16' id='latest-work'>
       <div className='container mx-auto px-4'>
         {/* Portfolio Header */}
         <div className='text-center mb-12'>

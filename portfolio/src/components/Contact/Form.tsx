@@ -86,11 +86,11 @@ export default function ContactForm() {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(formData),
-        });
+        })
 
         if (!response.ok) {
-          const errorData = await response.json();
-          throw new Error(errorData.error || 'Failed to send message');
+          const errorData = await response.json()
+          throw new Error(errorData.error || 'Failed to send message')
         }
 
         setSubmitStatus('success')
@@ -122,9 +122,9 @@ export default function ContactForm() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   }
 
   return (
@@ -132,61 +132,61 @@ export default function ContactForm() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="rounded-lg p-6"
+      className='rounded-lg p-6'
     >
       <motion.h3
         initial={{ y: -10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500"
+        className='text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500'
       >
         Send us a message
       </motion.h3>
 
       <motion.form
         variants={formVariants}
-        initial="hidden"
-        animate="visible"
+        initial='hidden'
+        animate='visible'
         onSubmit={handleSubmit}
-        className="space-y-6"
+        className='space-y-6'
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           <FormInput
-            id="firstName"
-            label="First Name"
+            id='firstName'
+            label='First Name'
             value={formData.firstName}
             onChange={handleInputChange}
             error={errors.firstName}
-            placeholder="Sanjay"
+            placeholder='Sanjay'
           />
 
           <FormInput
-            id="lastName"
-            label="Last Name"
+            id='lastName'
+            label='Last Name'
             value={formData.lastName}
             onChange={handleInputChange}
-            placeholder="KV"
+            placeholder='KV'
           />
 
           <FormInput
-            id="email"
-            label="Email"
-            type="email"
-            inputMode="email"
+            id='email'
+            label='Email'
+            type='email'
+            inputMode='email'
             value={formData.email}
             onChange={handleInputChange}
             error={errors.email}
-            placeholder="youremail@gmail.com"
+            placeholder='youremail@gmail.com'
           />
 
           <FormInput
-            id="phone"
-            label="Phone Number"
-            type="tel"
-            inputMode="tel"
+            id='phone'
+            label='Phone Number'
+            type='tel'
+            inputMode='tel'
             value={formData.phone}
             onChange={handleInputChange}
-            placeholder="+1 012 3456 789"
+            placeholder='+1 012 3456 789'
           />
         </div>
 
@@ -197,17 +197,17 @@ export default function ContactForm() {
         />
 
         <FormInput
-          id="message"
-          label="Message"
+          id='message'
+          label='Message'
           value={formData.message}
           onChange={handleInputChange}
           error={errors.message}
-          placeholder="Write your message here..."
+          placeholder='Write your message here...'
           isTextarea
         />
 
         <motion.div
-          className="flex justify-end"
+          className='flex justify-end'
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
@@ -218,9 +218,9 @@ export default function ContactForm() {
         <AnimatePresence>
           {submitStatus !== 'idle' && (
             <motion.div
-              key="status"
+              key='status'
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
+              animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >

@@ -101,8 +101,8 @@ const Navbar = () => {
 
   return (
     <nav
-      role="navigation"
-      aria-label="Main navigation"
+      role='navigation'
+      aria-label='Main navigation'
       className={cn(
         'sticky top-0 z-50 transition-all duration-300 py-2 px-4 sm:px-8 md:px-16 bg-header',
         scrolled ? 'bg-transparent backdrop-blur-sm shadow-md' : ''
@@ -125,18 +125,18 @@ const Navbar = () => {
         {isMenuOpen ? (
           <button
             onClick={toggleMenu}
-            aria-label="Close menu"
-            className="fixed top-4 right-4 z-50 lg:hidden p-2 text-foreground bg-background rounded-md shadow-md hover:bg-secondary/20 transition"
+            aria-label='Close menu'
+            className='fixed top-4 right-4 z-50 lg:hidden p-2 text-foreground bg-background rounded-md shadow-md hover:bg-secondary/20 transition'
           >
             <X size={28} />
           </button>
         ) : (
           <button
             onClick={toggleMenu}
-            aria-label="Open menu"
-            aria-controls="mobile-menu"
+            aria-label='Open menu'
+            aria-controls='mobile-menu'
             aria-expanded={false}
-            className="lg:hidden p-2 text-foreground rounded-md hover:bg-secondary/20 transition-colors"
+            className='lg:hidden p-2 text-foreground rounded-md hover:bg-secondary/20 transition-colors'
           >
             <Menu size={24} />
           </button>

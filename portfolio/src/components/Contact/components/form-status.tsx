@@ -11,15 +11,15 @@ export default function FormStatus({ status }: FormStatusProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.4, type: "spring" }}
-        className="bg-green-600/20 border border-green-500 text-green-300 px-6 py-4 rounded-lg flex items-center"
+        transition={{ duration: 0.4, type: 'spring' }}
+        className='bg-green-600/20 border border-green-500 text-green-300 px-6 py-4 rounded-lg flex items-center'
       >
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+          transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
         >
-          <CheckCircle className="w-6 h-6 mr-3 text-green-400" />
+          <CheckCircle className='w-6 h-6 mr-3 text-green-400' />
         </motion.div>
         <motion.p
           initial={{ opacity: 0, x: -10 }}
@@ -38,15 +38,15 @@ export default function FormStatus({ status }: FormStatusProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.4, type: "spring" }}
-        className="bg-red-600/20 border border-red-500 text-red-300 px-6 py-4 rounded-lg flex items-center"
+        transition={{ duration: 0.4, type: 'spring' }}
+        className='bg-red-600/20 border border-red-500 text-red-300 px-6 py-4 rounded-lg flex items-center'
       >
         <motion.div
           initial={{ rotate: -90, opacity: 0 }}
           animate={{ rotate: 0, opacity: 1 }}
-          transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+          transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
         >
-          <AlertCircle className="w-6 h-6 mr-3 text-red-400" />
+          <AlertCircle className='w-6 h-6 mr-3 text-red-400' />
         </motion.div>
         <motion.p
           initial={{ opacity: 0, x: -10 }}

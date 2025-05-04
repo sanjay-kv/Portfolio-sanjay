@@ -7,13 +7,13 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const project = projectData.projects.find(p => p.slug === params.slug)
+  const project = projectData.projects.find((p) => p.slug === params.slug)
 
   // Default metadata if project is not found
   if (!project) {
     return {
       title: 'Project Not Found',
-      description: 'The requested project could not be found.'
+      description: 'The requested project could not be found.',
     }
   }
 
@@ -33,15 +33,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: project.mainImage,
           width: 1200,
           height: 630,
-          alt: project.title
-        }
-      ]
+          alt: project.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: project.title,
       description: project.brief,
-      images: [project.mainImage]
+      images: [project.mainImage],
     },
     verification: {
       google: 'google',
@@ -64,12 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const Projects = ({
-  params,
-}: {
-  params: { slug: string }
-  searchParams: { tab?: string }
-}) => {
+const Projects = ({ params }: { params: { slug: string }; searchParams: { tab?: string } }) => {
   return <ProjectPage slug={params.slug} />
 }
 

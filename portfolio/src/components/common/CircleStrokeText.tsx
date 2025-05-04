@@ -68,7 +68,10 @@ const CircleStrokeText: React.FC<CircleStrokeTextProps> = ({
         />
       </motion.svg>
       <motion.span
-        className={cn('relative text-lg sm:text-base md:text-lg font-bold px-2 text-foreground text-center z-10 whitespace-nowrap', textHeight)}
+        className={cn(
+          'relative text-lg sm:text-base md:text-lg font-bold px-2 text-foreground text-center z-10 whitespace-nowrap',
+          textHeight
+        )}
         variants={textVariants}
       >
         {text}

@@ -6,12 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: [
-          '/private/',
-          '/api/',
-          '/_next/',
-          '/404',
-        ],
+        disallow: ['/private/', '/api/', '/_next/', '/404'],
       },
       {
         userAgent: 'Googlebot-Image',

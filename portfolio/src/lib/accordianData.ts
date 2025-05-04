@@ -1,64 +1,64 @@
 export const accordianData = {
-  'journey': [
+  journey: [
     {
-      'title': 'Pre-Assessment',
-      'description': 'Check CheckCheckCheckCheckCheckCheckCheckCheckCheckCheckCheck Check',
+      title: 'Pre-Assessment',
+      description: 'Check CheckCheckCheckCheckCheckCheckCheckCheckCheckCheckCheck Check',
     },
     {
-      'title': 'Personalized Call',
-      'description': '',
+      title: 'Personalized Call',
+      description: '',
     },
     {
-      'title': 'Research',
-      'description': '',
+      title: 'Research',
+      description: '',
     },
     {
-      'title': 'Roadmap',
-      'description': '',
+      title: 'Roadmap',
+      description: '',
     },
     {
-      'title': 'Success',
-      'description': '',
-    },
-  ],
-  'mentorhip': [
-    {
-      'title': 'An aspiring Data Professional',
-      'description': '',
-    },
-    {
-      'title': 'A Career Changer',
-      'description': '',
-    },
-    {
-      'title': 'An Experienced Professional',
-      'description': '',
+      title: 'Success',
+      description: '',
     },
   ],
-  'faq': [
+  mentorhip: [
     {
-      'title': 'What kind of results can I expect from the Mentorship?',
-      'description': '',
+      title: 'An aspiring Data Professional',
+      description: '',
     },
     {
-      'title': 'What topics or skills will be covered during the Mentorship?',
-      'description': '',
+      title: 'A Career Changer',
+      description: '',
     },
     {
-      'title': 'What tools will I need?',
-      'description': '',
+      title: 'An Experienced Professional',
+      description: '',
+    },
+  ],
+  faq: [
+    {
+      title: 'What kind of results can I expect from the Mentorship?',
+      description: '',
     },
     {
-      'title': 'Will this guarantee a job?',
-      'description': '',
+      title: 'What topics or skills will be covered during the Mentorship?',
+      description: '',
     },
     {
-      'title': 'How do I know where to start?',
-      'description': '',
+      title: 'What tools will I need?',
+      description: '',
     },
     {
-      'title': 'What do I actually get?',
-      'description': '',
+      title: 'Will this guarantee a job?',
+      description: '',
     },
-  ]
+    {
+      title: 'How do I know where to start?',
+      description: '',
+    },
+    {
+      title: 'What do I actually get?',
+      description: '',
+    },
+  ],
 }

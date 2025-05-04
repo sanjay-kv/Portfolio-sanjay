@@ -54,3 +54,21 @@ body {
     @apply rounded-xl px-3 py-1.5 sm:px-5 sm:py-2 bg-foreground text-background text-sm sm:text-base whitespace-nowrap cursor-pointer
   }
 }
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}

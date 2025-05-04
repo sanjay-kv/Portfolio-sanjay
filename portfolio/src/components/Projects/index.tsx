@@ -106,7 +106,7 @@ export default function ProjectPage({ slug }: { slug: string }) {
 
       {/* Project Information */}
       <motion.main
-        className='py-16 bg-gray-900'
+        className='py-16 bg-gray-900 container mx-auto px-4'
         initial='initial'
         animate='animate'
         variants={staggerContainer}
@@ -162,7 +162,7 @@ export default function ProjectPage({ slug }: { slug: string }) {
 
       {/* Project Gallery */}
       <motion.section
-        className='py-16 bg-gray-950'
+        className='py-16 bg-gray-950 container mx-auto px-6'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}

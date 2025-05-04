@@ -169,7 +169,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
           <div className='flex justify-center mt-8 gap-3'>
             <button
               onClick={() => goToSlide(currentIndex - 1)}
-              className='p-2 rounded-full bg-foreground bg-opacity-30 hover:bg-opacity-50 text-foreground transition-all focus:outline-none focus:ring-2 focus:ring-foreground'
+              className='p-2 cursor-pointer rounded-full bg-foreground bg-opacity-30 hover:bg-opacity-50 text-foreground transition-all focus:outline-none focus:ring-2 focus:ring-foreground'
               aria-label='Previous testimonials'
             >
               <ChevronLeft className='w-5 h-5 text-background' />
@@ -186,7 +186,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
                   <button
                     key={index}
                     onClick={() => goToSlide(slideIndex)}
-                    className={`w-2.5 h-2.5 text-background rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-foreground ${
+                    className={`w-2.5 h-2.5 text-background rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-foreground cursor-pointer ${
                       Math.floor(currentIndex / 4) === Math.floor(slideIndex / 4)
                         ? 'bg-foreground'
                         : 'bg-foreground bg-opacity-50 hover:bg-opacity-70'
@@ -202,7 +202,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
 
             <button
               onClick={() => goToSlide(currentIndex + 1)}
-              className='p-2 rounded-full bg-foreground bg-opacity-30 hover:bg-opacity-50 text-foreground transition-all focus:outline-none focus:ring-2 focus:ring-foreground'
+              className='p-2 cursor-pointer rounded-full bg-foreground bg-opacity-30 hover:bg-opacity-50 text-foreground transition-all focus:outline-none focus:ring-2 focus:ring-foreground'
               aria-label='Next testimonials'
             >
               <ChevronRight className='w-5 h-5 text-background' />

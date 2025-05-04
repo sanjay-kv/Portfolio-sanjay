@@ -6,7 +6,7 @@ const TechBadge: React.FC<{ name: string }> = ({ name }) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const colorMap: Record<string, string> = {
     'Next.js': 'bg-black text-white',
-    React: 'bg-[#58c4dc] text-white',
+    React: 'bg-[#58c4dc] text-black',
     Tailwind: 'bg-[#00bcff] text-black',
     Firebase: 'bg-amber-500 text-black',
     Zustand: 'bg-purple-600 text-white',
@@ -16,7 +16,7 @@ const TechBadge: React.FC<{ name: string }> = ({ name }) => {
     'OpenAI Api': 'bg-green-600 text-white',
     'Spotify Api': 'bg-green-500 text-black',
     'Node.js': 'bg-[#56a645] text-white',
-    MongoDB: 'bg-[#00ed64] text-white',
+    MongoDB: 'bg-[#00ed64] text-black',
     default: 'bg-blue-500 text-white',
   }
 

@@ -1,4 +1,5 @@
 import { ChangeEvent } from 'react'
+import { SubmitStatus } from '../types'
 
 export interface FormInputProps {
   id: string
@@ -13,7 +14,7 @@ export interface FormInputProps {
 }
 
 export interface FormStatusProps {
-  status: 'idle' | 'success' | 'error'
+  status: SubmitStatus
 }
 
 export interface SubmitButtonProps {

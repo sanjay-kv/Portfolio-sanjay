@@ -1,5 +1,5 @@
 // Define types for form data and errors
-export type FormData = {
+export type ContactFormData = {
   firstName: string
   lastName: string
   email: string
@@ -8,7 +8,8 @@ export type FormData = {
   message: string
 }
 
-export type FormErrors = Partial<Record<keyof FormData, string>>
+export type FormErrors = Partial<Record<keyof ContactFormData, string>>
+export type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error'
 
 export enum SubjectOption {
   GeneralInquiry = 'General Inquiry',

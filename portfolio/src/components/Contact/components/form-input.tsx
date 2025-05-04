@@ -56,12 +56,6 @@ export default function FormInput({
         exit={{ opacity: 0, height: 0 }}
         className='mt-1 text-sm text-red-500'>{error}</motion.p>
       }
-      <motion.div
-        className="absolute bottom-0 left-0 h-0.5 bg-blue-400"
-        initial={{ width: 0 }}
-        whileInView={{ width: error ? "0%" : "100%" }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      />
     </motion.div>
   )
 }

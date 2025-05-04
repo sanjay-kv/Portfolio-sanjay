@@ -6,10 +6,10 @@ import FormInput from './components/form-input'
 import SubjectSelector from './components/subject-selector'
 import SubmitButton from './components/submit-button'
 import FormStatus from './components/form-status'
-import { FormData, FormErrors, SubjectOption } from './types'
+import { ContactFormData, FormErrors, SubjectOption, SubmitStatus } from './types'
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<ContactFormData>({
     firstName: '',
     lastName: '',
     email: '',
@@ -20,7 +20,7 @@ export default function ContactForm() {
 
   const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>('idle')
 
   const subjectOptions = [
     SubjectOption.GeneralInquiry,
@@ -35,7 +35,7 @@ export default function ContactForm() {
       setFormData((prev) => ({ ...prev, [name]: value }))
 
       // Clear error when user types
-      if (errors[name as keyof FormData]) {
+      if (errors[name as keyof ContactFormData]) {
         setErrors((prev) => ({ ...prev, [name]: undefined }))
       }
     },
@@ -71,36 +71,49 @@ export default function ContactForm() {
     async (e: FormEvent) => {
       e.preventDefault()
 
-      if (!validateForm()) return
+      if (!validateForm()) {
+        setSubmitStatus('error')
+        return
+      }
 
+      setSubmitStatus('submitting')
       setIsSubmitting(true)
 
       try {
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1500))
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || 'Failed to send message');
+        }
+
         setSubmitStatus('success')
 
         // Reset form after successful submission
-        setTimeout(() => {
-          setFormData({
-            firstName: '',
-            lastName: '',
-            email: '',
-            phone: '',
-            subject: 'General Inquiry',
-            message: '',
-          })
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          subject: 'General Inquiry',
+          message: '',
+        })
 
-          // Reset status after 5 seconds
-          setTimeout(() => setSubmitStatus('idle'), 5000)
-        }, 1000)
+        // Reset status after 5 seconds
+        setTimeout(() => setSubmitStatus('idle'), 5000)
       } catch {
         setSubmitStatus('error')
       } finally {
         setIsSubmitting(false)
       }
     },
-    [validateForm]
+    [validateForm, formData]
   )
 
   const formVariants = {

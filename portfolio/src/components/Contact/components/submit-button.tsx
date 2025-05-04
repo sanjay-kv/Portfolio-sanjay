@@ -13,7 +13,7 @@ export default function SubmitButton({ isSubmitting }: SubmitButtonProps) {
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.2, type: "spring", stiffness: 400 }}
       className={`flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600
-        text-white py-3 px-8 rounded-lg shadow-lg shadow-blue-600/20 transition-all duration-300
+        text-white py-3 px-8 cursor-pointer rounded-lg shadow-lg shadow-blue-600/20 transition-all duration-300
         ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
     >
       {isSubmitting ? (

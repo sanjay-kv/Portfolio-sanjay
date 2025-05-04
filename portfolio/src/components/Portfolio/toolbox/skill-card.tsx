@@ -33,7 +33,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ category, index }) => {
     >
       <div className='p-4'>
         <h2
-          className={`text-center text-xl font-semibold mb-2 ${titleColors[index]}`}
+          className={cn('text-center text-xl font-semibold mb-2', titleColors[index])}
           id={`category-${category.title.toLowerCase()}`}
         >
           {category.title}

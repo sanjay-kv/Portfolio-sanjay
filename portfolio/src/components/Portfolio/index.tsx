@@ -1,5 +1,5 @@
 import Header from './header'
-import { projects, tabs } from '@/lib/projectsData'
+import { projects, tabs } from '@/lib/projects/projects'
 import { Project, Props, TabId } from './types'
 import LatestWorkSection from './latest-work'
 import SelectedWorkSection from './selected-work'

@@ -1,10 +1,10 @@
 'use client'
 
-import { cn } from '@/lib/utils'
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState, useEffect, useCallback, useMemo } from 'react'
 import { Menu, X } from 'lucide-react'
+import { cn } from '@/lib/utils'
 import NavLink from './NavLink'
 
 // Move routes outside component to prevent recreation on each render
@@ -67,9 +67,7 @@ const Navbar = () => {
 
   // Memoized route click handler
   const handleRouteClick = useCallback(() => {
-    if (isMenuOpen) {
-      setIsMenuOpen(false)
-    }
+    if (isMenuOpen) setIsMenuOpen((prev) => !prev)
   }, [isMenuOpen])
 
   // Prevent scrolling when mobile menu is open
@@ -103,6 +101,8 @@ const Navbar = () => {
 
   return (
     <nav
+      role="navigation"
+      aria-label="Main navigation"
       className={cn(
         'sticky top-0 z-50 transition-all duration-300 py-2 px-4 sm:px-8 md:px-16 bg-header',
         scrolled ? 'bg-transparent backdrop-blur-sm shadow-md' : ''
@@ -122,20 +122,31 @@ const Navbar = () => {
         <div className='hidden lg:flex items-center space-x-6'>{navLinks}</div>
 
         {/* Mobile Menu Button */}
-        <button
-          className='lg:hidden flex items-center text-foreground p-2 rounded-md hover:bg-secondary/20 transition-colors'
-          onClick={toggleMenu}
-          aria-label='Toggle menu'
-          aria-expanded={isMenuOpen}
-          aria-controls='mobile-menu'
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {isMenuOpen ? (
+          <button
+            onClick={toggleMenu}
+            aria-label="Close menu"
+            className="fixed top-4 right-4 z-50 lg:hidden p-2 text-foreground bg-background rounded-md shadow-md hover:bg-secondary/20 transition"
+          >
+            <X size={28} />
+          </button>
+        ) : (
+          <button
+            onClick={toggleMenu}
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded={false}
+            className="lg:hidden p-2 text-foreground rounded-md hover:bg-secondary/20 transition-colors"
+          >
+            <Menu size={24} />
+          </button>
+        )}
       </div>
 
       {/* Mobile Navigation Overlay - Improved with animation and styling */}
       <div
         id='mobile-menu'
+        aria-hidden={!isMenuOpen}
         className={cn(
           'fixed inset-0 bg-background/95 z-40 lg:hidden flex flex-col justify-center items-center transition-opacity duration-300 ease-in-out',
           isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
@@ -149,7 +160,7 @@ const Navbar = () => {
               label={route.label}
               isActive={pathname === route.href}
               onClick={handleRouteClick}
-              isMobile={true}
+              isMobile
             />
           ))}
         </div>

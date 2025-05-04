@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import { FormInputProps } from './types'
 import { motion } from 'framer-motion'
 
@@ -44,7 +45,7 @@ export default function FormInput({
           rows={1}
           whileFocus={{ scale: 1.01 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className={`${commonProps.className} resize-none min-h-[55px]`}
+          className={cn(commonProps.className, 'resize-none min-h-[55px]')}
         />
       ) : (
         <motion.input {...commonProps} type={type} inputMode={inputMode} whileFocus={{ scale: 1.01 }}

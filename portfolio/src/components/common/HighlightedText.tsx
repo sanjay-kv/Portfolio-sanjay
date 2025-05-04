@@ -1,4 +1,5 @@
 'use client'
+import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 
 type HighlightedTextProps = {
@@ -48,7 +49,7 @@ const HighlightedText = ({ text, className, tag = 'h3' }: HighlightedTextProps) 
         className='absolute inset-0 bg-[#2878F2] z-0 origin-left'
         variants={backgroundVariants}
       />
-      <Tag className={`text-xl font-bold inline py-1 relative z-10 ${className}`}>
+      <Tag className={cn('text-xl font-bold inline py-1 relative z-10', className)}>
         {text.split('').map((char, index) => (
           <motion.span
             key={index}

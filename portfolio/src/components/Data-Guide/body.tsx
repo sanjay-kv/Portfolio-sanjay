@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform, useInView } from 'framer-motion'
 import CircleStrokeText from '../common/CircleStrokeText'
 import HighlightedText from '../common/HighlightedText'
 import UnderlineEffect from '../common/UnderlineEffect'
+import { cn } from '@/lib/utils'
 
 // Option Button Component with Animation
 const OptionButton = ({
@@ -19,7 +20,11 @@ const OptionButton = ({
 }) => {
   return (
     <motion.button
-      className={`w-full ${isActive ? 'bg-[#1da1f2]' : 'bg-[#1da1f2]/80'} text-foreground py-2 px-4 rounded-md mb-3 text-center font-medium hover:bg-blue-400 transition-colors relative overflow-hidden`}
+      className={cn(
+        'w-full text-foreground py-2 px-4 rounded-md mb-3 text-center font-medium transition-colors relative overflow-hidden',
+        isActive ? 'bg-[#1da1f2]' : 'bg-[#1da1f2]/80',
+        'hover:bg-blue-400'
+      )}
       onClick={clickHandler}
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}

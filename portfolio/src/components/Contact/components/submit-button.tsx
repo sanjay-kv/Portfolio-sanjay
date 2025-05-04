@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import { SubmitButtonProps } from './types'
 import { motion } from 'framer-motion'
 import { Send } from 'lucide-react'
@@ -12,9 +13,8 @@ export default function SubmitButton({ isSubmitting }: SubmitButtonProps) {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.2, type: "spring", stiffness: 400 }}
-      className={`flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600
-        text-foreground py-3 px-8 cursor-pointer rounded-lg shadow-lg shadow-blue-600/20 transition-all duration-300
-        ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
+      className={cn('flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 text-foreground py-3 px-8 cursor-pointer rounded-lg shadow-lg shadow-blue-600/20 transition-all duration-300',
+        isSubmitting && 'opacity-75 cursor-not-allowed')}
     >
       {isSubmitting ? (
         <motion.span className="flex items-center">

@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import { SubjectSelectorProps } from './types'
 import { motion } from 'framer-motion'
 
@@ -40,11 +41,10 @@ export default function SubjectSelector({
               transition: { duration: 0.2 }
             }}
             whileTap={{ scale: 0.95 }}
-            className={`flex items-center rounded-full py-2 px-4 text-sm ${
-              selectedSubject === option
-                ? 'bg-blue-500 text-foreground shadow-lg shadow-blue-500/30'
-                : 'bg-transparent text-gray-300 hover:bg-gray-800'
-            } transition-colors duration-300`}
+            className={cn(
+              "flex items-center rounded-full py-2 px-4 text-sm transition-colors duration-300 bg-transparent text-gray-300 hover:bg-gray-800",
+              selectedSubject === option && "bg-blue-500 text-foreground shadow-lg shadow-blue-500/30"
+            )}
           >
             <motion.span
               animate={selectedSubject === option ? {
@@ -52,7 +52,10 @@ export default function SubjectSelector({
                 backgroundColor: ["#3B82F6", "#60A5FA", "#3B82F6"]
               } : {}}
               transition={{ duration: 0.5 }}
-              className={`w-3 h-3 rounded-full mr-2 ${selectedSubject === option ? 'bg-white' : 'bg-gray-500'}`}
+              className={cn(
+                "w-3 h-3 rounded-full mr-2 bg-gray-500",
+                selectedSubject === option && "bg-white"
+              )}
             />
             {option}
 

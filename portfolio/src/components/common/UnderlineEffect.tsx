@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { UnderlineEffectProps } from './types'
+import { cn } from '@/lib/utils'
 
 const UnderlineEffect: React.FC<UnderlineEffectProps> = ({ stroke = '#2878F2', className }) => {
   const pathVariants = {
@@ -20,7 +21,7 @@ const UnderlineEffect: React.FC<UnderlineEffectProps> = ({ stroke = '#2878F2', c
 
   return (
     <motion.svg
-      className={`w-full max-w-[712px] h-auto my-2 ${className}`}
+      className={cn('w-full max-w-[712px] h-auto my-2', className)}
       viewBox='0 0 712 24'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'

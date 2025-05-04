@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { CircleStrokeTextProps } from './types'
+import { cn } from '@/lib/utils'
 
 const CircleStrokeText: React.FC<CircleStrokeTextProps> = ({
   height = 41,
@@ -67,7 +68,7 @@ const CircleStrokeText: React.FC<CircleStrokeTextProps> = ({
         />
       </motion.svg>
       <motion.span
-        className={`relative text-lg sm:text-base md:text-lg font-bold px-2 text-foreground text-center z-10 whitespace-nowrap ${textHeight}`}
+        className={cn('relative text-lg sm:text-base md:text-lg font-bold px-2 text-foreground text-center z-10 whitespace-nowrap', textHeight)}
         variants={textVariants}
       >
         {text}

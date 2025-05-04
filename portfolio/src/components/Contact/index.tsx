@@ -99,13 +99,13 @@ const ContactPage = () => {
                     transition={{ duration: 0.5 }}
                     className="flex items-center justify-center w-10 h-10 rounded-full mr-4"
                   >
-                    <span className="w-5 h-5 text-white">
+                    <span className="w-5 h-5 text-foreground">
                       <SocialIcon name="linkedin" />
                     </span>
                   </motion.div>
                   <Link
                     href={LINKEDIN}
-                    className="text-white hover:text-blue-200 transition-colors"
+                    className="text-foreground hover:text-blue-200 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -119,9 +119,9 @@ const ContactPage = () => {
                     transition={{ duration: 0.5 }}
                     className="flex items-center justify-center w-10 h-10 rounded-full mr-4"
                   >
-                    <Mail className="w-5 h-5 text-white" />
+                    <Mail className="w-5 h-5 text-foreground" />
                   </motion.div>
-                  <Link href={MAIL} className="text-white hover:text-blue-200 transition-colors">
+                  <Link href={MAIL} className="text-foreground hover:text-blue-200 transition-colors">
                     {MAIL.split(':')[1]}
                   </Link>
                 </motion.div>
@@ -132,7 +132,7 @@ const ContactPage = () => {
                     transition={{ duration: 0.5 }}
                     className="flex items-center justify-center w-10 h-10 rounded-full mr-4"
                   >
-                    <MapPin className="w-5 h-5 text-white" />
+                    <MapPin className="w-5 h-5 text-foreground" />
                   </motion.div>
                   <span>{ADDRESS}</span>
                 </motion.div>
@@ -208,7 +208,7 @@ const ContactPage = () => {
         >
           <Link
             href="/newsletter"
-            className="group flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white py-3 px-8 rounded-lg shadow-lg shadow-orange-500/20 transition-all duration-300 transform hover:scale-105"
+            className="group flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-foreground py-3 px-8 rounded-lg shadow-lg shadow-orange-500/20 transition-all duration-300 transform hover:scale-105"
           >
             <span>Subscribe to Newsletter</span>
             <motion.span

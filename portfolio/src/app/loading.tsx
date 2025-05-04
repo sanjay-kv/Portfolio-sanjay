@@ -58,7 +58,7 @@ const Loading = () => {
   }
 
   return (
-    <div className='flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white'>
+    <div className='flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-foreground'>
       <div className='relative flex flex-col items-center'>
         <motion.div
           className='absolute w-64 h-64 bg-blue-500/10 rounded-full'

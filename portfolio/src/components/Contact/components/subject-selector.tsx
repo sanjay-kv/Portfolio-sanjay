@@ -42,7 +42,7 @@ export default function SubjectSelector({
             whileTap={{ scale: 0.95 }}
             className={`flex items-center rounded-full py-2 px-4 text-sm ${
               selectedSubject === option
-                ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30'
+                ? 'bg-blue-500 text-foreground shadow-lg shadow-blue-500/30'
                 : 'bg-transparent text-gray-300 hover:bg-gray-800'
             } transition-colors duration-300`}
           >

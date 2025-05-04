@@ -101,7 +101,7 @@ export default function RootLayout({
         <ScrollProgressIndicator />
         <Toaster
           toastOptions={{
-            className: 'bg-gray-900 text-white',
+            className: 'bg-gray-900 text-foreground',
             duration: 3000,
             position: 'top-right',
             style: {

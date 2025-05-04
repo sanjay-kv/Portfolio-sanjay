@@ -13,13 +13,13 @@ export default function SubmitButton({ isSubmitting }: SubmitButtonProps) {
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.2, type: "spring", stiffness: 400 }}
       className={`flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600
-        text-white py-3 px-8 cursor-pointer rounded-lg shadow-lg shadow-blue-600/20 transition-all duration-300
+        text-foreground py-3 px-8 cursor-pointer rounded-lg shadow-lg shadow-blue-600/20 transition-all duration-300
         ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
     >
       {isSubmitting ? (
         <motion.span className="flex items-center">
           <svg
-            className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+            className="animate-spin -ml-1 mr-3 h-5 w-5 text-foreground"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

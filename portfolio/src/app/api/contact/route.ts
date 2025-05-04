@@ -18,7 +18,6 @@ async function sendViaWeb3Forms(formData: ContactFormData) {
     });
 
     const result = await response.json();
-    console.log('Web3Forms response:', result);
     return result.success;
   } catch (error) {
     console.error('Web3Forms submission failed:', error);

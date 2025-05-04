@@ -71,8 +71,6 @@ export const metadata: Metadata = {
   },
 }
 const Error = ({ error, reset }: { error: Error; reset: () => void }) => {
-  console.log('Error:', error)
-
   // For the interactive particle effect
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })

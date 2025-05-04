@@ -70,7 +70,7 @@ export default function ProjectPage({ slug }: { slug: string }) {
   }
 
   return (
-    <div className='min-h-screen text-foreground bg-background'>
+    <div className='min-h-screen text-foreground bg-background container mx-auto'>
       {/* Hero Section */}
       <motion.header
         className='relative h-[50vh] md:h-[60vh] overflow-hidden'

@@ -70,7 +70,7 @@ export default function ProjectPage({ slug }: { slug: string }) {
   }
 
   return (
-    <div className='min-h-screen text-foreground bg-background container mx-auto'>
+    <div className='min-h-screen text-foreground bg-background'>
       {/* Hero Section */}
       <motion.header
         className='relative h-[50vh] md:h-[60vh] overflow-hidden'
@@ -93,6 +93,7 @@ export default function ProjectPage({ slug }: { slug: string }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
+            className='sm:px-8'
           >
             <span className='inline-block px-3 py-1 bg-primary text-background text-sm font-medium rounded-full mb-4 uppercase'>
               {project.category}

@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 const SkillCard: React.FC<SkillCardProps> = ({ category, index }) => {
   const positions = [
     'left-1/3 -translate-x-1/2', // Languages
-    'left-1/2 -translate-y-2 md:translate-x-[-40%] md:translate-y-12', // Front End
+    'left-1/2 -translate-y-2 translate-x-[-15%] md:translate-x-[-40%] md:translate-y-12', // Front End
     'translate-y-[90%] left-2/5 md:left-3/5 md:translate-y-6', // Back End
   ]
 

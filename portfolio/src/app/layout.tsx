@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
+import { Toaster } from 'react-hot-toast'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import localFont from 'next/font/local'
 import './globals.css'
+import Navbar from '@/components/Navbar/Navbar'
+import Footer from '@/components/Footer/Footer'
+import ScrollProgressIndicator from '@/components/common/ScrollProgressIndicator'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -26,6 +31,7 @@ export const metadata: Metadata = {
     'I am Sanjay K V, Data Driven Problem solver and Head of Content at recodehive.com, currently pushing limits to make Data Science Tutorials accessible to everyone.',
   referrer: 'origin-when-cross-origin',
   keywords: ['Sanjay Viswanathan', 'tech', 'influencer', 'portfolio'],
+  manifest: '/manifest.json',
   authors: [{ name: 'Sanjay Viswanathan', url: new URL('https://github.com/sanjay-kv') }],
   icons: {
     icon: [
@@ -40,8 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@sanjaykv',
-    creator: '@sanjaykv',
+    site: '@sanjay_k_v',
+    creator: '@sanjay_k_v',
     title: 'Sanjay Viswanathan',
     description:
       'I am Sanjay K V, Data Driven Problem solver and Head of Content at recodehive.com, currently pushing limits to make Data Science Tutorials accessible to everyone.',
@@ -90,7 +96,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Navbar />
+        {children}
+        <Footer />
+        <ScrollProgressIndicator />
+        <Toaster
+          toastOptions={{
+            className: 'bg-gray-900 text-foreground',
+            duration: 3000,
+            position: 'top-right',
+            style: {
+              background: '#1a1a1a',
+              color: '#fff',
+              fontSize: '16px',
+              padding: '10px 20px',
+              borderRadius: '8px',
+            },
+          }}
+        />
+        <GoogleAnalytics gaId='G-FZG95C6C8V' />
+      </body>
     </html>
   )
 }

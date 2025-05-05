@@ -1,25 +1,74 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #FEFEFE;
+  --primary: #66ABFC;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #FEFEFE;
+    --primary: #66ABFC;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Mono';
+  /* font-family: 'Roboto Mono', 'Inter', serif; */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@theme {
+  --color-primary: #2878F2;
+  --color-active: #66ABFC;
+  --color-header: #191919;
+  --color-accent: #A4D2FB;
+  --color-foreground: #FEFEFE;
+  --color-background: #000000;
+  --color-blue-accent: #243CE6;
+  --color-gradient: radial-gradient(50% 50% at 50% 50%, rgba(40, 120, 242, 0.6) 0%, rgba(50, 15, 133, 0) 100%);
+  /* --font-Inter: 'Inter', serif; */
+}
+
+@layer utilities {
+  .bg-radial {
+    background-image: radial-gradient(50% 50% at 50% 50%, rgba(40, 120, 242, 0.6) 0%, rgba(50, 15, 133, 0) 100%);
+  }
+
+  .btn {
+    @apply rounded-xl px-3 py-1.5 sm:px-5 sm:py-2 bg-primary text-foreground text-sm sm:text-base whitespace-nowrap cursor-pointer
+  }
+
+  .btn-secondary {
+    @apply rounded-xl px-3 py-1.5 sm:px-5 sm:py-2 bg-foreground text-background text-sm sm:text-base whitespace-nowrap cursor-pointer
+  }
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
 }

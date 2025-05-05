@@ -1,0 +1,100 @@
+{
+  "projects": [
+    {
+      "id": "feed-buffer",
+      "title": "Feed Buffer Website",
+      "slug": "feed-buffer",
+      "category": "web application",
+      "brief": "A Tech Focused content for the students to keep aware about what's happening in the tech industry. The website has been hosted on the blogger.com",
+      "description": "Feed Buffer is a comprehensive social media management tool that allows businesses to schedule posts, analyze performance, and engage with their audience across multiple platforms. The project focused on creating an intuitive user interface with powerful backend capabilities.",
+      "info": {
+        "date": "January 2025",
+        "tools": ["React", "Next.js", "Node.js", "MongoDB", "Tailwind"],
+        "link": "https://feedbuffer.com"
+      },
+      "mainImage": "/assets/projects/feed-buffer/feed-buffer.png",
+      "photos": [
+        {
+          "src": "/assets/projects/feed-buffer/feed-buffer.png",
+          "alt": "Feed Buffer Dashboard Interface",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "src": "/assets/projects/feed-buffer/preview.png",
+          "alt": "Feed Buffer Landing Page Preview",
+          "width": 600,
+          "height": 1100
+        },
+        {
+          "src": "/assets/projects/feed-buffer/feed-buffer.png",
+          "alt": "Mobile Responsive View",
+          "width": 400,
+          "height": 800
+        },
+        {
+          "src": "/assets/projects/feed-buffer/feed-buffer.png",
+          "alt": "Content Calendar Interface",
+          "width": 800,
+          "height": 500
+        },
+        {
+          "src": "/assets/projects/feed-buffer/feed-buffer.png",
+          "alt": "User Settings Panel",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "id": "eco-tracker",
+      "title": "Eco Tracker App",
+      "slug": "eco-tracker",
+      "category": "mobile",
+      "brief": "A mobile application helping users reduce their carbon footprint through daily habit tracking and personalized recommendations.",
+      "description": "Eco Tracker is an innovative mobile application that empowers users to make environmentally conscious decisions in their everyday lives. The app provides personalized recommendations, tracks carbon savings, and builds a community of eco-conscious individuals working toward a sustainable future.",
+      "info": {
+        "date": "November 2024",
+        "tools": ["Firebase", "Node.js"],
+        "link": "https://ecotracker.app"
+      },
+      "testimonial": {
+        "quote": "Working with the team resulted in an app that exceeds our expectations and has already made a measurable impact on our users' environmental habits.",
+        "author": "Michael Chen, Founder of GreenTech Solutions"
+      },
+      "mainImage": "/assets/projects/rightway.png",
+      "photos": [
+        {
+          "src": "/assets/projects/eco-tracker/home.jpg",
+          "alt": "Eco Tracker Home Screen",
+          "width": 400,
+          "height": 800
+        },
+        {
+          "src": "/assets/projects/eco-tracker/stats.jpg",
+          "alt": "User Statistics Dashboard",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "/assets/projects/eco-tracker/challenges.jpg",
+          "alt": "Weekly Challenges Screen",
+          "width": 400,
+          "height": 500
+        },
+        {
+          "src": "/assets/projects/eco-tracker/community.jpg",
+          "alt": "Community Leaderboard",
+          "width": 400,
+          "height": 800
+        },
+        {
+          "src": "/assets/projects/eco-tracker/profile.jpg",
+          "alt": "User Profile Page",
+          "width": 400,
+          "height": 700
+        }
+      ]
+    }
+  ]
+}

@@ -98,6 +98,58 @@
       ]
     },
 
+
+    {
+      "id": "googlegemini",
+      "title": "Session: Google Gemini AI",
+      "slug": "googlegemini",
+      "category": "public-speaking",
+      "brief": "A technical session conducted on Google Gemini AI, covering the onboarding guidelines for students.",
+      "description": "Delivered an engaging technical session on Google Gemini AI, focusing on onboarding the new student ambassadors to Google community Program. This session was exclusive for the people selected from 100000 Student applications. The session included hands-on demonstrations, real-world applications of AI onboarding guidelines do's and don'ts, and strategies for effective CA role. Participants learned how to leverage Google Gemini's capabilities to enhance their projects and academic pursuits.",
+      "info": {
+        "date": "10 August 2025",
+        "tools": ["Google Gemini", "Google Program", "Ambassador program", "AI/ML", "Prompt Engineering", "220 participants"],
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7360628085328678912/"
+      },
+      "testimonial": {
+        "quote": "Sanjay's session on Google Gemini was incredibly insightful and practical. The hands-on examples and real-world applications made complex AI concepts accessible to everyone.",
+        "author": "Tech Event Organizer"
+      },
+      "mainImage": "/assets/projects/google-std-amd-1/01-Google-banner.png",
+      "photos": [
+        {
+          "src": "/assets/projects/google-std-amd-1/sanjay-talk-google2.jpg",
+          "alt": "Sanjay presenting Google Gemini AI session",
+          "width": 1500,
+          "height": 300
+        },
+        {
+          "src": "/assets/projects/google-std-amd-1/sanjay-talk-google.jpg",
+          "alt": "Technical demonstration of Gemini API features",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "/assets/projects/google-std-amd-1/google-stat.png",
+          "alt": "Audience engagement during Gemini AI presentation",
+          "width": 400,
+          "height": 800
+        },
+        {
+          "src": "/assets/projects/google-std-amd-1/02-main-google-banner.png",
+          "alt": "Google student Ambassador Gemini banner",
+          "width": 800,
+          "height": 500
+        },
+        {
+          "src": "/assets/projects/google-std-amd-1/09-perks-onboarding-google.png",
+          "alt": "Perks and Onboarding Swags for the people.",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+
     {
       "id": "eco-tracker",
       "title": "Eco Tracker App",

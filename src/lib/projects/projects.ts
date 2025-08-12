@@ -44,19 +44,22 @@ export const projects: Project[] = [
     image: '/assets/projects/personal-portfolio.png',
     link: '/projects/personal-portfolio',
   },
+
+
+    {
+    id: 'googlegemini',
+    title: 'Google Ambassdor Onboarding : Aug 10, 2025',
+    category: 'public-speaking',
+    image: '/assets/projects/google-std-amd-1/sanjay-talk-google2.jpg',
+    link: '/projects/googlegemini',
+  },
+
   {
     id: 'adapta2021',
     title: 'Guest Speaker: Adapt2021',
     category: 'public-speaking',
     image: '/assets/projects/adapt2021-guest-speaker.png',
     link: '/projects/adapta2021',
-  },
-  {
-    id: 'open-source-project',
-    title: 'Open Source Contribution',
-    category: 'open-source',
-    image: '/assets/projects/open-source.png',
-    link: '/projects/open-source-contribution',
   },
 ]
 

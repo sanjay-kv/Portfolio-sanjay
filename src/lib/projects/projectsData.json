@@ -46,6 +46,58 @@
         }
       ]
     },
+
+        {
+      "id": "srm-portal",
+      "title": "SRM Portal",
+      "slug": "srm-portal",
+      "category": "web application",
+      "brief": "A platform for SRM Institute students to access resources, submit assignments, and collaborate on projects.",
+      "description": "The SRM Portal is a comprehensive web application designed to enhance the academic experience of students at SRM Institute. It provides a centralized platform for accessing course materials, submitting assignments, and collaborating with peers. The portal features real-time notifications, grade tracking, and seamless integration with university systems.",
+      "info": {
+        "date": "December 2024",
+        "tools": ["React", "Next.js", "Node.js", "MongoDB", "Tailwind CSS", "TypeScript"],
+        "link": "https://srm-portal.edu"
+      },
+      "testimonial": {
+        "quote": "The SRM Portal has revolutionized how our students interact with academic resources. It's intuitive, fast, and has significantly improved student engagement.",
+        "author": "Dr. Sarah Johnson, Academic Director at SRM Institute"
+      },
+      "mainImage": "/assets/projects/srm-portal.png",
+      "photos": [
+        {
+          "src": "/assets/projects/srm-portal.png",
+          "alt": "SRM Portal Student Dashboard",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "src": "/assets/projects/srm-portal.png",
+          "alt": "Assignment Submission Interface",
+          "width": 600,
+          "height": 1100
+        },
+        {
+          "src": "/assets/projects/srm-portal.png",
+          "alt": "Mobile Responsive Portal View",
+          "width": 400,
+          "height": 800
+        },
+        {
+          "src": "/assets/projects/srm-portal.png",
+          "alt": "Course Resources Library",
+          "width": 800,
+          "height": 500
+        },
+        {
+          "src": "/assets/projects/srm-portal.png",
+          "alt": "Student Collaboration Hub",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+
     {
       "id": "eco-tracker",
       "title": "Eco Tracker App",
@@ -96,5 +148,11 @@
         }
       ]
     }
+
+
+
+
+
+
   ]
 }

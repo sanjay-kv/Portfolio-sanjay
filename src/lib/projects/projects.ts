@@ -20,7 +20,7 @@ export const projects: Project[] = [
     id: 'srm-portal',
     title: 'Applications- SRM Portal',
     category: 'apps',
-    image: '/assets/projects/srm-portal.png',
+    image: '/assets/projects/srm-portal/srm-portal.png',
     link: '/projects/srm-portal',
   },
   {
